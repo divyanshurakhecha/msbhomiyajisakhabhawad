@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS भोमिया जी शाखा संयुक्त भवाद</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>.leader-photo{
+    width:100%;
+    height:320px;
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    border-radius:18px;
+    margin-bottom:15px;
+}
+    .leader-photo{
+    width:100%;
+    height:350px;
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    transition:0.5s;
+}
+
+.leader-card:hover .leader-photo{
+    transform:scale(1.05);
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background: linear-gradient(135deg, #ff9933, #ffffff, #fff5e6);
+            color: #222;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 153, 51, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 5px 25px rgba(0,0,0,.25);
+            z-index: 1000;
+        }
+        .logo h2 {
+            color: white;
+            font-size: 24px;
+            font-weight: 900;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: .3s;
+        }
+        nav a:hover {
+            color: #ffe600;
+        }
+        .menu-btn {
+            display: none;
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+        }
+        @media(max-width:992px) {
+            header {
+                padding: 15px 20px;
+            }
+            .menu-btn {
+                display: block;
+            }
+            nav {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: #ff9933;
+                padding: 20px;
+                text-align: center;
+            }
+            nav a {
+                display: block;
+                margin: 15px;
+                margin-left: 0;
+            }
+            nav.active {
+                display: block;
+            }
+        }
+        
+        .notice-board {
+            margin-top: 75px;
+            background: #e65c00;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .notice-title {
+            background: #ffe600;
+            color: #222;
+            padding: 5px 15px;
+            border-radius: 4px;
+            margin-right: 15px;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .notice-marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .notice-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+        .notice-text span {
+            margin-right: 50px;
+        }
+
+        .hero {
+            position: relative;
+            height: calc(100vh - 120px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            user-select: none;
+        }
+        .bg-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            cursor: grab;
+        }
+        .bg-slider:active {
+            cursor: grabbing;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.75));
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .hero h1 {
+            font-size: 65px;
+            font-weight: 900;
+            text-shadow: 0 8px 25px black;
+        }
+        .hero p {
+            font-size: 28px;
+            margin: 25px 0;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6600;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(0,0,0,.3);
+            transition: .3s;
+            pointer-events: auto;
+        }
+        .btn:hover {
+            transform: scale(1.08);
+        }
+        section {
+            padding: 90px 10%;
+        }
+        h2 {
+            text-align: center;
+            font-size: 40px;
+            color: #e65c00;
+            margin-bottom: 45px;
+            font-weight: 900;
+        }
+        
+        .leaders-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .leader-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border: 2px solid #ffe6cc;
+        }
+       .leader-photo{
+    width:100%;
+    height:340px;
+    border-radius:20px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    overflow:hidden;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.leader-photo::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35));
+}.leader-photo{
+    transition:0.5s;
+}
+
+.leader-card:hover .leader-photo{
+    transform:scale(1.05);
+}
+        .leader-card h4 {
+            font-size: 22px;
+            color: #b33600;
+            margin-bottom: 5px;
+        }
+        .leader-card p {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+        }
+
+        .about {
+            background: rgba(255,255,255,.85);
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 10px 35px rgba(0,0,0,.2);
+            text-align: center;
+        }
+        .about p {
+            font-size: 20px;
+            line-height: 36px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: rgba(255,255,255,.90);
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,.18);
+            border-top: 5px solid #ff6600;
+            transition: .4s;
+        }
+        .card:hover {
+            transform: translateY(-12px);
+        }
+        .card h3 {
+            color: #e65c00;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        .card p {
+            font-size: 18px;
+        }
+        
+        .accordion-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .accordion-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-left: 6px solid #ff6600;
+        }
+        .accordion-header {
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #e65c00;
+            cursor: pointer;
+            background: #fff5e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .accordion-content {
+            padding: 25px;
+            font-size: 18px;
+            line-height: 32px;
+            color: #444;
+            background: #fff;
+            border-top: 1px solid #ffd4b3;
+        }
+        
+        .shakha-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .shakha-column {
+            background: #fffbf7;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #ffe6cc;
+        }
+        .column-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff6600;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ff6600;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+        .shakha-columns ul {
+            margin-left: 10px;
+            list-style-type: none;
+        }
+        .shakha-columns li {
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #ffd4b3;
+            padding-bottom: 5px;
+            font-size: 17px;
+            line-height: 26px;
+        }
+
+        .boudhik-columns {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 30px;
+        }
+        .boudhik-left {
+            background: #fffcf9;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #ffe6cc;
+        }
+        .boudhik-right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .sub-part {
+            background: #fffcf9;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #ffe6cc;
+        }
+        .sub-part-title {
+            font-size: 19px;
+            font-weight: bold;
+            color: #ff6600;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #ff6600;
+            padding-bottom: 5px;
+        }
+        .geet-text {
+            font-size: 17px;
+            line-height: 28px;
+            text-align: center;
+            color: #333;
+        }
+        .geet-dhru {
+            font-weight: bold;
+            color: #e65c00;
+            margin-bottom: 15px;
+        }
+        .geet-antara {
+            margin-bottom: 15px;
+        }
+        .sanskrit-shlok {
+            font-weight: bold;
+            font-style: italic;
+            color: #b33600;
+            text-align: center;
+            font-size: 18px;
+            line-height: 30px;
+            background: #fff5ec;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .amrit-vachan-text {
+            font-size: 17px;
+            line-height: 28px;
+            border-left: 3px solid #ff6600;
+            padding-left: 15px;
+            color: #333;
+        }
+        .author-name {
+            text-align: right;
+            font-weight: bold;
+            color: #e65c00;
+            margin-top: 10px;
+        }
+
+        .prarthana-content-box {
+            background: #fffcf9;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #ffe6cc;
+        }
+        .prarthana-verses {
+            text-align: center;
+            font-size: 19px;
+            line-height: 36px;
+            font-weight: bold;
+            color: #b33600;
+            background: #fff5ec;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px dashed #ffd4b3;
+        }
+        .prarthana-meaning {
+            font-size: 17px;
+            line-height: 30px;
+            padding: 15px;
+            background: #ffffff;
+            border-left: 4px solid #ff6600;
+            color: #444;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,.25);
+            transition: .4s;
+        }
+        .gallery img:hover {
+            transform: scale(1.08);
+        }
+        .contact-box {
+            background: rgba(255,255,255,.9);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+        .contact-box h3 {
+            color: #e65c00;
+            font-size: 25px;
+            margin: 20px;
+        }
+        footer {
+            background: #ff6600;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 18px;
+        }
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            text-decoration: none;
+            z-index: 999;
+            box-shadow: 0 8px 20px rgba(0,0,0,.3);
+        }
+        @media(max-width:768px) {
+            .hero h1 { font-size: 38px; }
+            .hero p { font-size: 20px; }
+            section { padding: 70px 5%; }
+            .leaders-container { grid-template-columns: 1fr; }
+            .shakha-columns, .boudhik-columns { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h2>🚩 MS भोमिया जी शाखा</h2>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+        <a href="#home">होम</a>
+        <a href="#about">हमारे बारे में</a>
+        <a href="#program">कार्यक्रम</a>
+        <a href="#shakha-schedule">दैनिक शाखा कार्यक्रम</a>
+        <a href="#gallery">गैलरी</a>
+        <a href="#contact">संपर्क</a>
+    </nav>
+</header>
+
+<div class="notice-board">
+    <div class="notice-title">📢 सूचना पट्ट</div>
+    <div class="notice-marquee">
+        <div class="notice-text">
+            <span>🚩 MS भोमिया जी शाखा भवाद में आपका स्वागत है।</span>
+            <span>🌅 दैनिक शाखा का समय: प्रतिदिन प्रातःकाल एवं सायंकाल।</span>
+            <span>🙏 आगामी रविवार को विशेष साप्ताहिक मिलन कार्यक्रम का आयोजन किया जाएगा। सभी स्वयंसेवक समय पर पधारें।</span>
+            <span>✨ राष्ट्र प्रथम • सेवा • संस्कार - संघ कार्य ही राष्ट्र कार्य है।</span>
+        </div>
+    </div>
+</div>
+
+<section class="hero" id="home">
+    <div class="bg-slider" id="dragSlider">
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1600');"></div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600');"></div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600');"></div>
+    </div>
+    <div class="hero-content">
+        <h1>🚩 MS भोमिया जी शाखा भवाद</h1>
+        <p>राष्ट्र प्रथम • सेवा • संस्कार</p>
+        <a href="#about" class="btn">अधिक जानें</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>हमारे प्रेरणास्रोत एवं परिचय</h2>
+    
+  <div class="leaders-container">
+
+    <div class="leader-card">
+
+        <div class="leader-photo"
+        style="background-image:url('hedgewar.jpg');">
+        </div>
+
+        <h4>परम पूजनीय डॉ. केशवराव बळिराम हेडगेवार</h4>
+        <p>आद्य सरसंघचालक एवं संघ संस्थापक</p>
+
+    </div>
+
+    <div class="leader-card">
+
+        <div class="leader-photo"
+        style="background-image:url('guruji.jpg');">
+        </div>
+
+        <h4>परम पूजनीय माधव सदाशिवराव गोलवलकर (श्री गुरुजी)</h4>
+        <p>द्वितीय सरसंघचालक एवं राष्ट्र-चिन्तक</p>
+
+    </div>
+
+</div>
+    </div>
+
+    <div class="about">
+        <p>MS भोमिया जी शाखा भवाद में आपका हार्दिक स्वागत है। परम पूजनीय आद्य सरसंघचालक डॉ. हेडगेवार जी द्वारा रोपित इस संघ कार्य के माध्यम से यहाँ दैनिक शाखा, सेवा, संस्कार, समाज जागरण तथा राष्ट्र निर्माण के विभिन्न पुनीत कार्य अनवरत किए जाते हैं।</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🚩 दैनिक शाखा</h3>
+            <p>प्रतिदिन शाखा का आयोजन एवं व्यायाम।</p>
+        </div>
+        <div class="card">
+            <h3>🙏 सेवा कार्य</h3>
+            <p>समाज सेवा एवं जनकल्याण के कार्य।</p>
+        </div>
+        <div class="card">
+            <h3>📚 संस्कार</h3>
+            <p>युवाओं में राष्ट्रभक्ति एवं चरित्र निर्माण।</p>
+        </div>
+    </div>
+</section>
+
+<section id="program">
+    <h2>शाखा कार्यक्रम</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🌅 दैनिक शाखा</h3>
+            <p>प्रतिदिन शाखा एवं व्यायाम।</p>
+        </div>
+        <div class="card">
+            <h3>🙏 साप्ताहिक मिलन</h3>
+            <p>प्रत्येक सप्ताह विशेष मिलन।</p>
+        </div>
+        <div class="card">
+            <h3>🚩 विशेष उत्सव</h3>
+            <p>गुरु दक्षिणा, पथ संचलन एवं अन्य कार्यक्रम।</p>
+        </div>
+    </div>
+</section>
+
+<section id="shakha-schedule">
+    <h2>🌅 दैनिक शाखा कार्यक्रम</h2>
+    <div class="accordion-container">
+        
+        <details class="accordion-item">
+            <summary class="accordion-header">
+                <span>💪 शारीरिक</span>
+                <span>▼</span>
+            </summary>
+            <div class="accordion-content">
+                <div class="shakha-columns">
+                    <div class="shakha-column">
+                        <div class="column-title">🎯 शाखा खेल</div>
+                        <ul>
+                            <li><strong>१. कबड्डी</strong> - दम और रणनीति का खेल</li>
+                            <li><strong>२. खो-खो</strong> - गति और फुर्ती का अद्भुत खेल</li>
+                            <li><strong>३. शेर और बकरी</strong> - एकाग्रता बढाने वाला खेल</li>
+                            <li><strong>४. अमृत घट</strong> - संघ भावना विकसित करने हेतु</li>
+                            <li><strong>५. योगासन एवं सूर्य नमस्कार</strong> - शारीरिक व मानसिक स्वास्थ्य</li>
+                        </ul>
+                    </div>
+                    <div class="shakha-column">
+                        <div class="column-title">🗣️ शाखा जयघोष</div>
+                        <ul style="margin-left: 0;">
+                            <li><strong>१.</strong> भारत माता की ~ <em>जय हो, जय हो</em></li>
+                            <li><strong>२.</strong> भारत में यदि रहना है तो ~ <em>वन्दे मातरम् कहना होगा, वन्दे मातरम् गाना होगा ~ या भारत से जाना होगा</em></li>
+                            <li><strong>३.</strong> हिन्दू-हिन्दू एक रहेंगे ~ <em>भेदभाव को नहीं सहेंगे</em></li>
+                            <li><strong>४.</strong> अन्न जहाँ का ~ <em>हमने खाया</em><br>वस्त्र जहाँ के ~ <em>हमने पहने</em><br>उसकी रक्षा कौन करेगा ~ <em>हम करेंगे, हम करेंगे</em><br>देश की रक्षा कौन करेगा ~ <em>हम करेंगे, हम करेंगे</em><br>देश की रक्षा कौन करेगा ~ <em>हम करेंगे, हम करेंगे</em></li>
+                            <li><strong>५.</strong> हिन्दू-हिन्दू ~ <em>भाई-भाई</em></li>
+                            <li><strong>६.</strong> भारत के बलिदानियों की ~ <em>जय-हो, जय-हो</em></li>
+                            <li><strong>७.</strong> भारत अखंड हो कर रहेगा ~ <em>जय श्री राम, जय श्री राम</em></li>
+                            <li><strong>८.</strong> जय शिवाजी ~ <em>जय भवानी</em></li>
+                            <li><strong>९.</strong> कौन जीता कौन जीता ~ <em>संघ जीता संघ जीता</em></li>
+                            <li><strong>१०.</strong> बच्चा-बच्चा राम का ~ <em>मातृभूमि के काम का</em></li>
+                            <li><strong>११.</strong> जो हमसे टकराएगा ~ <em>वो हमसे मिल जाएगा</em></li>
+                            <li><strong>१२.</strong> छुआ छूत और ऊँचा नीच ~ <em>नहीं चाहिए अपने बीच</em></li>
+                            <li><strong>१३.</strong> हम सब हिंदू एक बनेंगे ~ <em>छुआछूत को दूर करेंगे</em></li>
+                            <li><strong>१४.</strong> तूफानों से टक्कर लेंगे ~ <em>पर्वत के दो टूक करेंगे</em></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+        
+        <details class="accordion-item">
+            <summary class="accordion-header">
+                <span>🗣️ बौद्धिक</span>
+                <span>▼</span>
+            </summary>
+            <div class="accordion-content">
+                <div class="boudhik-columns">
+                    <div class="boudhik-left">
+                        <div class="sub-part-title" style="text-align: center;">🎵 संघ गीत</div>
+                        <div class="geet-text">
+                            <div class="geet-dhru">
+                                स्वयंसेवकों का यही एक सपना ।<br>
+                                बनें कार्यकर्ता, बढे देश अपना ।।ध्रु।।
+                            </div>
+                            <div class="geet-antara">
+                                कोई श्याम वर्णी, कोई गौर वर्णी ।<br>
+                                कोई शांत भावी, कोई क्रोध-कर्मी ।।<br>
+                                सभी मित्र बनकर ।<br>
+                                करें काम मिलकर ।।<br>
+                                कोई हो नवागत, तो कोई पुराना ।।१।।<br>
+                                <small style="color:#777;">बनें कार्यकर्ता .......</small>
+                            </div>
+                            <div class="geet-antara">
+                                न पूर्वाग्रही हो, न हो आत्मभावी ।<br>
+                                ह्रदय मन खुला हो, विवेकी स्वभावी ।।<br>
+                                विचारों में स्थिरता ।<br>
+                                वचन में मधुरता ।।<br>
+                                परायों व अपनों की निंदा से बचना ।।२।।<br>
+                                <small style="color:#777;">बनें कार्यकर्ता .......</small>
+                            </div>
+                            <div class="geet-antara">
+                                उमंगी रहे हम, उमंगी हो साथी ।<br>
+                                गति भी रहे, आपसी मेल खाती ।।<br>
+                                अकेले न हो हम ।।<br>
+                                यही ध्यान हरदम ।।<br>
+                                कदम से कदम को, मिलाकर ही चलना ।।३।।<br>
+                                <small style="color:#777;">बनें कार्यकर्ता .......</small>
+                            </div>
+                            <div class="geet-antara">
+                                हो चिंतन हमारा, सदा दूरगामी ।<br>
+                                मगर कार्यशैली, हो एक-एक कदमी ।।<br>
+                                सभी काम भारी ।<br>
+                                हो परिणामकारी ।।<br>
+                                सफलता मिलेगी, यही भाव भरना ।।४।।<br>
+                                <small style="color:#777;">बनें कार्यकर्ता ....</small>
+                            </div>
+                            <div class="geet-antara">
+                                वाचन, मनन और अनुभव कथन से ।<br>
+                                रखें अद्यतन ज्ञान, बौद्धिक जतन से ।।<br>
+                                सदा स्वस्थ हो हम ।।<br>
+                                रहे व्यस्त भी हम ।।<br>
+                                समय-दान-क्षमता, बढ़ाते ही रहना ।।५।।<br>
+                                <small style="color:#777;">बनें कार्यकर्ता ....</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="boudhik-right">
+                        <div class="sub-part">
+                            <div class="sub-part-title">✨ सुभाषितम्</div>
+                            <div class="sanskrit-shlok">
+                                अष्टादशपुराणेषु व्यासस्य वचनद्वयम् ।<br>
+                                परोपकारः पुण्याय पापाय परपीडनम् ॥
+                            </div>
+                            <p style="font-size: 16px; color: #444; line-height: 26px;">
+                                <strong>भावार्थ:</strong> दूसरों की सेवा करना सबसे बड़ा पुण्य है और दूसरों को दुख देना सबसे बड़ा पाप है।
+                            </p>
+                        </div>
+                        
+                        <div class="sub-part">
+                            <div class="sub-part-title">💬 अमृत वचन</div>
+                            <div class="amrit-vachan-text">
+                                "व्यक्ति का मूल्यांकन इस बात से नहीं होता कि उसने क्या प्राप्त किया, बल्कि इस बात से होता है कि उसने राष्ट्र और समाज के लिए क्या समर्पित किया।"
+                            </div>
+                            <div class="author-name">— श्री गुरुजी (माधव सदाशिवराव गोलवलकर)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        
+        <details class="accordion-item">
+            <summary class="accordion-header">
+                <span>🚩 शाखा पद्धति</span>
+                <span>▼</span>
+            </summary>
+            <div class="accordion-content">
+                <div class="shakha-columns">
+                    <div class="shakha-column">
+                        <div class="column-title">शाखा प्रारंभ</div>
+                        <ul>
+                            <li>१. संघ स्वस्थान (-०-०)</li>
+                            <li>२. संघ दक्ष</li>
+                            <li>३. आरम</li>
+                            <li>४. अग्रेसर</li>
+                            <li>५. अग्रेसर सम्यक्</li>
+                            <li>६. आरम</li>
+                            <li>७. संघ सम्पत</li>
+                            <li>८. संघ दक्ष</li>
+                            <li>९. संघ सम्यक्</li>
+                            <li>१०. अग्रेसर अर्धवृत</li>
+                            <li>११. संघ आरम</li>
+                            <li>१२. संघ दक्ष</li>
+                            <li>१३. ध्वज प्रणाम 1 - 2 - 3</li>
+                            <li>१४. संख्या</li>
+                            <li>१५. आरम</li>
+                            <li>१६. संघ दक्ष</li>
+                            <li>१७. आरम</li>
+                            <li>१८. संघ दक्ष</li>
+                            <li>१९. स्वस्थान</li>
+                        </ul>
+                    </div>
+                    <div class="shakha-column">
+                        <div class="column-title">शाखा विकिर</div>
+                        <ul>
+                            <li>१. अग्रेसर (—०००)</li>
+                            <li>२. अग्रेसर सम्यक</li>
+                            <li>३. आरम</li>
+                            <li>४. संघ संपत (—००)</li>
+                            <li>५. संघ दक्ष</li>
+                            <li>६. संघ सम्यक</li>
+                            <li>७. अग्रेसर अर्धवृत</li>
+                            <li>८. संख्या</li>
+                            <li>९. आरम</li>
+                            <li>१०. संघ दक्ष</li>
+                            <li>११. आरम</li>
+                            <li>१२. संघ दक्ष</li>
+                            <li>१३. प्रार्थना</li>
+                            <li>१४. ध्वजप्रणाम 1 - 2 - 3</li>
+                            <li>१५. संघ विकिर</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-header">
+                <span>🙏 संघ प्रार्थना (पूर्ण रूप)</span>
+                <span>▼</span>
+            </summary>
+            <div class="accordion-content">
+                <div class="prarthana-content-box">
+                    <div class="prarthana-verses">
+                        नमस्ते सदा वत्सले मातृभूमे<br>
+                        त्वया हिन्दुभूमे सुखं वर्धितोऽहम् ।<br>
+                        महामङ्गले पुण्यभूमे त्वदर्थे<br>
+                        पतत्वेष कायो नमस्ते नमस्ते ॥१॥<br>
+                        <br>
+                        प्रभो शक्तिमन् हिन्दुराष्ट्राङ्गभूता<br>
+                        इमे सादरं त्वां नमामो वयम् ।<br>
+                        त्वदीयाय कार्याय बद्धा कटीयं<br>
+                        शुभामाशिषं देहि नस्तत्पूर्तये ॥२॥<br>
+                        <br>
+                        अजयां च विश्वस्य देहीश शक्तिं<br>
+                        सुशीलं जगद्येन नम्रं भवेत् ।<br>
+                        श्रुतं चैव यत्कण्टकाकीर्णमार्गं<br>
+                        स्वयं स्वीकृतं नः सुगमं कारयेत् ॥३॥<br>
+                        <br>
+                        समुत्कर्षनिःश्रेयसस्यैकमुग्रं<br>
+                        परं साधनं नाम वीरव्रतम् ।<br>
+                        तदन्तः स्फुरत्वक्षया ध्येयनिष्ठा<br>
+                        हृदन्तः प्रजागर्तु तीव्राऽनिशम् ॥४॥<br>
+                        <br>
+                        विजेत्री च नः संहता कार्यशक्तिर्<br>
+                        विधायास्य धर्मस्य संरक्षणम् ।<br>
+                        परं वैभवं नेतुमेतत् स्वराष्ट्रं<br>
+                        समर्था भवत्वाशिषा ते भृशम् ॥५॥<br>
+                        <br>
+                        ॥ भारत माता की जय ॥
+                    </div>
+                    <div class="prarthana-meaning">
+                        <strong>संपूर्ण हिंदी भावार्थ:</strong><br>
+                        1. हे वत्सल मातृभूमि! मैं आपको सदा नमस्कार करता हूँ। हे हिंदू भूमि! आपके आंचल में मैं सुखपूर्वक बड़ा हुआ हूँ। हे महामंगलमयी पुण्यभूमि! आपके ही कार्य के लिए मेरा यह शरीर समर्पित हो जाए, आपको बारम्बार नमस्कार है।<br><br>
+                        2. हे सर्वशक्तिमान ईश्वर! हम इस हिंदू राष्ट्र के अंग स्वरूप सभी स्वयंसेवक आपको आदरपूर्वक प्रणाम करते हैं। हम सब आपके ही ईश्वरीय कार्य के लिए कमर कसकर तैयार हुए हैं, हमें इस कार्य को सफलतापूर्वक पूरा करने के लिए अपना शुभ आशीर्वाद प्रदान करें।<br><br>
+                        3. हे प्रभु! हमें ऐसी अजेय शक्ति दें जिसे संपूर्ण विश्व भी पराजित न कर सके, और ऐसा उत्तम चरित्र (शील) दें जिसके सम्मुख संपूर्ण संसार स्वतः ही विनम्र हो जाए। हमें वह ज्ञान और बुद्धि दें जो हमारे द्वारा स्वयं चुने गए इस काँटों भरे मार्ग को सुगम और प्रशस्त बना सके।<br><br>
+                        4. लौकिक उन्नति और परम कल्याण (मोक्ष) को प्राप्त करने का एकमात्र श्रेष्ठ साधन 'वीरव्रत' (साधना) हमारे अंतःकरण में जागृत हो। हमारे हृदयों में अक्षय ध्येयनिष्ठा हमेशा तीव्र रूप से प्रज्ज्वलित रहे।<br><br>
+                        5. हमारी यह संगठित कार्यशक्ति विजय को प्राप्त करे और अपने उत्तम धर्म व संस्कृति का संरक्षण करते हुए, इस परम पवित्र राष्ट्र को वैभव के उच्चतम शिखर पर ले जाने में समर्थ हो। हे ईश्वर! आपके परम आशीर्वाद से हमारी यह शक्ति अति शीघ्र सफल हो।
+                    </div>
+                </div>
+            </div>
+        </details>
+        
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>फोटो गैलरी</h2>
+    <div class="gallery">
+        <img src="gallery1.jpg" alt="Gallery 1">
+        <img src="gallery2.jpg" alt="Gallery 2">
+        <img src="gallery3.jpg" alt="Gallery 3">
+        <img src="gallery4.jpg" alt="Gallery 4">
+    </div>
+</section>
+
+<section id="contact">
+    <h2>संपर्क करें</h2>
+    <div class="contact-box">
+        <h3>📞 संपर्क नंबर</h3>
+        <p>9351449562 | 8529547353</p>
+        <br>
+        <a href="https://wa.me/919351449562" class="btn" target="_blank">WhatsApp पर संपर्क करें</a>
+    </div>
+</section>
+
+<footer>
+    <h3>🚩 MS भोमिया जी शाखा भवाद</h3>
+    <p>© 2026 सर्वाधिकार सुरक्षित</p>
+</footer>
+
+<a href="https://wa.me/919351449562" class="whatsapp" target="_blank">💬</a>
+
+<script>
+function toggleMenu(){
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+}
+
+let slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+let slideInterval = setInterval(nextSlide, 4000);
+let startX = 0;
+
+function showSlide(index) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+const sliderElement = document.getElementById('dragSlider');
+
+sliderElement.addEventListener('mousedown', (e) => {
+    startX = e.clientX;
+    clearInterval(slideInterval);
+});
+
+sliderElement.addEventListener('mouseup', (e) => {
+    let endX = e.clientX;
+    if (startX - endX > 50) nextSlide();
+    if (endX - startX > 50) prevSlide();
+    slideInterval = setInterval(nextSlide, 4000);
+});
+
+sliderElement.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    clearInterval(slideInterval);
+});
+
+sliderElement.addEventListener('touchend', (e) => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) nextSlide();
+    if (endX - startX > 50) prevSlide();
+    slideInterval = setInterval(nextSlide, 4000);
+});
+</script>
+
+</body>
+</html>
