@@ -914,7 +914,137 @@
         
     </div>
 </section>
+<!-- घोष सेक्शन -->
+<section id="ghosh" class="section">
+    <h2>🎵 घोष (Ghosh)</h2>
 
+    <div class="cards">
+
+        <div class="card">
+            <h3>घोष परिचय</h3>
+            <p>
+                घोष संघ की शाखा का एक महत्वपूर्ण अंग है।
+                घोष के माध्यम से स्वयंसेवकों में अनुशासन,
+                तालमेल और देशभक्ति की भावना विकसित होती है।
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>घोष वाद्य</h3>
+            <ul>
+                <li>बांसुरी</li>
+                <li>आनक</li>
+                <li>साइड ड्रम</li>
+                <li>बिगुल</li>
+                <li>ताशा</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>घोष गीत</h3>
+            <p>
+                घोष गीत शाखा में उत्साह और ऊर्जा का संचार करते हैं।
+            </p>
+
+            <button onclick="openGhosh()">
+                घोष गीत देखें
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- शाखा गीत सेक्शन -->
+<section id="geet" class="section">
+
+<h2>🎶 शाखा गीत</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>गीत संग्रह</h3>
+
+<p>
+शाखा में गाए जाने वाले प्रेरणादायक गीत।
+</p>
+
+<button onclick="openGeet()">
+गीत पढ़ें
+</button>
+
+</div>
+
+
+<div class="card">
+<h3>गीत ऑडियो</h3>
+
+<p>
+यहाँ से शाखा गीत सुने जा सकते हैं।
+</p>
+
+<audio controls>
+<source src="geet.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- Popup Window -->
+
+<div id="popup" class="popup">
+
+<div class="popup-box">
+
+<span onclick="closePopup()">×</span>
+
+<h2 id="popupTitle"></h2>
+
+<p id="popupText"></p>
+
+</div>
+
+</div>
+
+
+<script>
+
+function openGhosh(){
+
+document.getElementById("popupTitle").innerHTML="घोष गीत";
+
+document.getElementById("popupText").innerHTML=
+"घोष गीत शाखा के वातावरण में उत्साह, अनुशासन और एकता का भाव उत्पन्न करते हैं।";
+
+document.getElementById("popup").style.display="block";
+
+}
+
+
+function openGeet(){
+
+document.getElementById("popupTitle").innerHTML="शाखा गीत संग्रह";
+
+document.getElementById("popupText").innerHTML=
+"यहाँ शाखा के सभी गीतों का संग्रह उपलब्ध होगा।";
+
+document.getElementById("popup").style.display="block";
+
+}
+
+
+function closePopup(){
+
+document.getElementById("popup").style.display="none";
+
+}
+
+</script>
 <section id="gallery">
     <h2>फोटो गैलरी</h2>
     <div class="gallery">
