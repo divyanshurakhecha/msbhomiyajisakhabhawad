@@ -772,7 +772,30 @@ section#geet *{
     color: inherit !important;
 }
 </head>
-<body><!-- घोष वाद्य स्लाइड -->
+ <div id="testSlide" style="
+display:none;
+position:fixed;
+top:10%;
+left:10%;
+background:white;
+padding:30px;
+z-index:9999;
+border-radius:20px;
+">
+
+<h2>🎺 घोष वाद्य</h2>
+
+<p>यह स्लाइड खुल रही है।</p>
+
+<button onclick="document.getElementById('testSlide').style.display='none'">
+बंद करें
+</button>
+
+</div>
+
+<button onclick="document.getElementById('testSlide').style.display='block'">
+घोष वाद्य खोलें
+</button><body><!-- घोष वाद्य स्लाइड -->
 
 <div id="vadySlide" class="vady-slide">
 
