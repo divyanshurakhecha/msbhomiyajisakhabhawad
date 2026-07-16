@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MS भोमिया जी शाखा भवाद - राष्ट्रीय स्वयंसेवक संघ</title>
     <style>
-        /* CSS Variables & Global Styles */
         :root {
             --primary-color: #ff6f00;
             --primary-dark: #e65100;
@@ -34,7 +33,6 @@
             line-height: 1.7;
         }
 
-        /* Top Bar */
         .top-bar {
             background-color: var(--primary-dark);
             color: var(--white);
@@ -45,28 +43,27 @@
             letter-spacing: 0.5px;
         }
 
-        /* Header */
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: var(--white);
-            padding: 40px 20px;
+            padding: 45px 20px;
             text-align: center;
             box-shadow: var(--shadow);
         }
 
         header h1 {
-            font-size: 2.6rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             opacity: 0.95;
             font-weight: 300;
         }
 
-        /* Sticky Navigation Bar */
+        /* Navigation */
         nav {
             background-color: var(--white);
             position: sticky;
@@ -104,7 +101,6 @@
             border-bottom: 3px solid var(--primary-dark);
         }
 
-        /* Mobile Menu */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -120,14 +116,13 @@
             transition: var(--transition);
         }
 
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 30px 20px;
         }
 
-        /* Amritvachan Quote Banner */
+        /* Quote Banner */
         .quote-banner {
             background: var(--white);
             border-left: 6px solid var(--primary-color);
@@ -150,16 +145,15 @@
             font-size: 1rem;
         }
 
-        /* Beautiful SVG Slider Placeholder (Resolves Broken Images issue) */
+        /* Slider */
         .slider-container {
             width: 100%;
-            height: 360px;
+            height: 380px;
             position: relative;
             overflow: hidden;
             border-radius: 16px;
             margin-bottom: 35px;
             box-shadow: var(--shadow);
-            background: #ffe5cc;
         }
 
         .slide {
@@ -179,11 +173,6 @@
             opacity: 1;
         }
 
-        /* Beautiful Fallback Gradients for Slider so they never look broken */
-        .slide-1 { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('gallery1.jpg') center/cover, linear-gradient(135deg, #ff9e40, #ff6f00); }
-        .slide-2 { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('gallery2.jpg') center/cover, linear-gradient(135deg, #ff6f00, #d84315); }
-        .slide-3 { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('gallery3.jpg') center/cover, linear-gradient(135deg, #d84315, #3e2723); }
-
         .slide-content {
             color: var(--white);
             padding: 25px 40px;
@@ -191,7 +180,7 @@
             text-align: center;
             max-width: 80%;
             border: 2px solid rgba(255, 255, 255, 0.3);
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.45);
             backdrop-filter: blur(5px);
         }
 
@@ -204,6 +193,31 @@
         .slide-content p {
             font-size: 1.2rem;
             font-weight: 300;
+        }
+
+        /* Side-By-Side Columns (शारीरिक व बौद्धिक + शाखा गतिविधियाँ side-by-side) */
+        .two-column-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .column-box {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--secondary-color);
+        }
+
+        .column-box h2 {
+            color: var(--primary-dark);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 8px;
+            display: inline-block;
         }
 
         /* Details (Prarthana Box) */
@@ -270,7 +284,7 @@
             font-size: 1.05rem;
         }
 
-        /* Sections Title Layout */
+        /* Universal Special Section */
         .special-section {
             padding: 50px 25px;
             background: var(--white);
@@ -308,15 +322,15 @@
             font-size: 1.1rem;
         }
 
-        /* Structured Grids - EQUAL heights */
+        /* Grids */
         .prerna-grid, .utsav-grid, .feature-box, .song-box {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
             margin-top: 25px;
         }
 
-        /* Generic Card Styles with default heights */
+        /* Cards */
         .prerna-card, .utsav-card, .feature-card, .song-card {
             background: var(--card-bg);
             border: 1px solid #ffe8cc;
@@ -337,19 +351,17 @@
             border-color: var(--primary-color);
         }
 
-        /* Image Box - Standard height and Fallback background to prevent 'broken' visual layout */
+        /* Dedicated Local Image Wrapper */
         .image-box-wrapper {
             width: 100%;
-            height: 200px;
-            background-color: #ffe0b2;
+            height: 220px;
             border-radius: 8px;
             overflow: hidden;
             margin-bottom: 15px;
             border: 2px solid var(--secondary-color);
-            position: relative;
         }
 
-        .prerna-img-placeholder {
+        .prerna-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -425,7 +437,7 @@
         /* Photo Gallery Grid Style - Safe Placeholders */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-top: 25px;
         }
@@ -433,7 +445,6 @@
         .gallery-item {
             width: 100%;
             height: 180px;
-            background-color: #ffe0b2;
             border-radius: 10px;
             overflow: hidden;
             border: 3px solid var(--white);
@@ -523,7 +534,6 @@
             box-shadow: 0 0 5px rgba(255, 111, 0, 0.2);
         }
 
-        /* Buttons styling */
         button, .btn {
             background: var(--primary-color);
             color: var(--white);
@@ -545,7 +555,6 @@
             transform: translateY(-2px);
         }
 
-        /* Footer */
         footer {
             background: #2d1b10;
             color: var(--white);
@@ -564,7 +573,6 @@
             opacity: 0.8;
         }
 
-        /* Sticky WhatsApp Button */
         .whatsapp {
             position: fixed;
             bottom: 25px;
@@ -587,7 +595,6 @@
             transform: scale(1.1) rotate(15deg);
         }
 
-        /* Lightbox Modal */
         .modal {
             display: none;
             position: fixed;
@@ -632,7 +639,6 @@
             color: var(--primary-color);
         }
 
-        /* Mobile responsive style */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8rem;
@@ -669,20 +675,16 @@
                 height: 240px;
             }
 
-            .slide-content h2 {
-                font-size: 1.4rem;
-            }
-
-            .slide-content p {
-                font-size: 0.95rem;
-            }
-
             .special-section {
                 padding: 30px 15px;
             }
 
             .special-section h2 {
                 font-size: 1.5rem;
+            }
+
+            .two-column-layout {
+                grid-template-columns: 1fr;
             }
 
             .contact-section-layout {
@@ -700,7 +702,6 @@
     <p>पवित्र ध्येय, अखंड साधना और राष्ट्र निर्माण | जोधपुर विभाग</p>
 </header>
 
-<!-- Sticky Navigation Bar -->
 <nav>
     <div class="menu-toggle" id="mobile-menu" onclick="toggleMobileMenu()">
         <span></span>
@@ -721,28 +722,28 @@
 
 <div class="container">
 
-    <!-- Amritvachan Box -->
+    <!-- Amritvachan Quote Banner -->
     <div class="quote-banner">
         <p id="daily-quote">"हमारा ध्येय किसी एक वर्ग का उत्थान नहीं, अपितु संपूर्ण हिंदू समाज को संगठित कर भारत को विश्वगुरु के परम वैभवशाली शिखर पर ले जाना है।"</p>
         <strong>- डॉ. केशवराव बळिराम हेडगेवार</strong>
         <div style="clear: both;"></div>
     </div>
 
-    <!-- Clean Image Slider (With robust fail-safe layout) -->
+    <!-- Image Slider -->
     <div class="slider-container" id="dragSlider">
-        <div class="slide active slide-1">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gallery1.jpg');">
             <div class="slide-content">
                 <h2>संघे शक्ति कलियुगे</h2>
                 <p>संगठित समाज ही सशक्त राष्ट्र का आधार है।</p>
             </div>
         </div>
-        <div class="slide slide-2">
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gallery2.jpg');">
             <div class="slide-content">
                 <h2>दैनिक शाखा</h2>
                 <p>राष्ट्र सेवा और सुदृढ़ चरित्र निर्माण की अनुपम कार्यशाला।</p>
             </div>
         </div>
-        <div class="slide slide-3">
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gallery3.jpg');">
             <div class="slide-content">
                 <h2>शारीरिक व बौद्धिक विकास</h2>
                 <p>मैदानी खेलों, योग, सुभाषितों और राष्ट्र चिंतन द्वारा सर्वांगीण विकास।</p>
@@ -750,7 +751,32 @@
         </div>
     </div>
 
-    <!-- RSS Prarthana Section (100% Intact as requested) -->
+    <!-- restored Side-By-Side Columns Layout ("saririk" / physical column vs activities column) -->
+    <div class="two-column-layout">
+        <div class="column-box">
+            <h2>💪 शारीरिक विकास</h2>
+            <p style="margin-bottom: 12px; color: var(--text-muted);">दैनिक शाखा के माध्यम से स्वयंसेवकों के शारीरिक विकास हेतु विशेष गतिविधियाँ की जाती हैं:</p>
+            <ul style="padding-left: 20px; color: var(--text-dark);">
+                <li style="margin-bottom: 8px;">🏃 <strong>मैदानी खेल:</strong> कबड्डी, खो-खो, एवं संघ के पारम्परिक खेल जो सामूहिक भाईचारा बढ़ाते हैं।</li>
+                <li style="margin-bottom: 8px;">🧘 <strong>योग व सूर्य नमस्कार:</strong> मन की एकाग्रता और शारीरिक लचीलेपन के लिए नियमित योग अभ्यास।</li>
+                <li style="margin-bottom: 8px;">🛡️ <strong>दण्ड व नियुद्ध:</strong> आत्मरक्षा की प्राचीन विधाओं का व्यावहारिक प्रशिक्षण।</li>
+                <li style="margin-bottom: 8px;">🚶 <strong>समता:</strong> अनुशासित कदमताल और पथ-संचलन का अभ्यास।</li>
+            </ul>
+        </div>
+        
+        <div class="column-box">
+            <h2>🧠 बौद्धिक विकास</h2>
+            <p style="margin-bottom: 12px; color: var(--text-muted);">स्वयंसेवकों के मानसिक एवं वैचारिक विकास हेतु शाखा में नियमित चर्चाएं की जाती हैं:</p>
+            <ul style="padding-left: 20px; color: var(--text-dark);">
+                <li style="margin-bottom: 8px;">📖 <strong>अमृतवचन व सुभाषित:</strong> महापुरुषों के प्रेरक वाक्य एवं नैतिक मूल्य।</li>
+                <li style="margin-bottom: 8px;">🗣️ <strong>बौद्धिक चर्चा:</strong> सामाजिक समरसता, राष्ट्रहित और समसामयिक विषयों पर संवाद।</li>
+                <li style="margin-bottom: 8px;">🎭 <strong>कथा व प्रसंग:</strong> भारत के गौरवशाली इतिहास और क्रांतिकारियों की जीवन गाथाएं।</li>
+                <li style="margin-bottom: 8px;">🚩 <strong>ध्येय चिंतन:</strong> समाज को संगठित करने के पावन संकल्प का मनन।</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- RSS Prarthana (100% Intact) -->
     <details id="prarthana">
         <summary>🙏 राष्ट्रीय स्वयंसेवक संघ प्रार्थना एवं संपूर्ण भावार्थ</summary>
         <div class="prarthana-content">
@@ -794,7 +820,7 @@
         </div>
     </details>
 
-    <!-- Prerna Srot Section (With Beautiful, highly reliable image fallbacks) -->
+    <!-- Prerna Srot (Configured perfectly to read local images shivaji.jpg, hedgewar.jpg, guruji.jpg, pratap.jpg) -->
     <section id="prerna-srot" class="special-section">
         <h2>✨ हमारे प्रेरणा स्रोत (जीवन परिचय)</h2>
         <p class="section-desc">राष्ट्रहित, धर्मरक्षा एवं सांस्कृतिक पुनरुत्थान के परम पुनीत पथ का मार्ग प्रशस्त करने वाले महापुरुष:</p>
@@ -804,7 +830,7 @@
             <div class="prerna-card">
                 <div>
                     <div class="image-box-wrapper">
-                        <img src="shivaji.jpg" alt="छत्रपति शिवाजी महाराज" class="prerna-img-placeholder" onerror="this.src='https://images.unsplash.com/photo-1626761191288-75c3f30999aa?w=500&auto=format&fit=crop&q=60';">
+                        <img src="shivaji.jpg" alt="छत्रपति शिवाजी महाराज" class="prerna-img" onerror="this.src='https://images.unsplash.com/photo-1626761191288-75c3f30999aa?w=500&auto=format&fit=crop&q=60';">
                     </div>
                     <h3>छत्रपति शिवाजी महाराज</h3>
                     <span class="prerna-title">🚩 हिंदवी स्वराज्य संस्थापक</span>
@@ -817,7 +843,7 @@
             <div class="prerna-card">
                 <div>
                     <div class="image-box-wrapper">
-                        <img src="hedgewar.jpg" alt="डॉ. केशवराव बळिराम हेडगेवार" class="prerna-img-placeholder" onerror="this.src='https://images.unsplash.com/photo-1590086782957-93c06ef217b4?w=500&auto=format&fit=crop&q=60';">
+                        <img src="hedgewar.jpg" alt="डॉ. केशवराव बळिराम हेडगेवार" class="prerna-img" onerror="this.src='https://images.unsplash.com/photo-1590086782957-93c06ef217b4?w=500&auto=format&fit=crop&q=60';">
                     </div>
                     <h3>डॉ. हेडगेवार जी</h3>
                     <span class="prerna-title">🚩 राष्ट्रीय स्वयंसेवक संघ संस्थापक</span>
@@ -830,7 +856,7 @@
             <div class="prerna-card">
                 <div>
                     <div class="image-box-wrapper">
-                        <img src="guruji.jpg" alt="माधव सदाशिवराव गोलवलकर" class="prerna-img-placeholder" onerror="this.src='https://images.unsplash.com/photo-1607990283143-e81e7a2c93ab?w=500&auto=format&fit=crop&q=60';">
+                        <img src="guruji.jpg" alt="माधव सदाशिवराव गोलवलकर" class="prerna-img" onerror="this.src='https://images.unsplash.com/photo-1607990283143-e81e7a2c93ab?w=500&auto=format&fit=crop&q=60';">
                     </div>
                     <h3>श्री गुरुजी (एम. एस. गोलवलकर)</h3>
                     <span class="prerna-title">🚩 द्वितीय सरसंघचालक</span>
@@ -843,7 +869,7 @@
             <div class="prerna-card">
                 <div>
                     <div class="image-box-wrapper">
-                        <img src="pratap.jpg" alt="महाराणा प्रताप" class="prerna-img-placeholder" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&auto=format&fit=crop&q=60';">
+                        <img src="pratap.jpg" alt="महाराणा प्रताप" class="prerna-img" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&auto=format&fit=crop&q=60';">
                     </div>
                     <h3>वीर शिरोमणि महाराणा प्रताप</h3>
                     <span class="prerna-title">🚩 अदम्य साहस व स्वाभिमान के प्रतीक</span>
@@ -855,7 +881,7 @@
         </div>
     </section>
 
-    <!-- Shad Utsav Section (100% Intact) -->
+    <!-- Shad Utsav Section -->
     <section id="utsav" class="special-section">
         <h2>🚩 षड् उत्सव (छह प्रमुख राष्ट्रीय उत्सव)</h2>
         <p class="section-desc">राष्ट्रीय स्वयंसेवक संघ की पद्धति में मनाए जाने वाले 6 मुख्य सांस्कृतिक और सामाजिक पर्व जो समाज में नई ऊर्जा और समरसता का संचार करते हैं:</p>
@@ -917,7 +943,7 @@
         </div>
     </section>
 
-    <!-- Ghosh Vibhag Section (100% Intact) -->
+    <!-- Ghosh Vibhag Section -->
     <section id="ghosh" class="special-section">
         <h2>🥁 घोष विभाग (Band Division)</h2>
         <p class="section-desc">घोष शाखा का अत्यंत महत्वपूर्ण और प्रभावी अंग है। यह अनुशासन, सामूहिक तालमेल, वीरता और उत्साह का जीवंत प्रकटीकरण है:</p>
@@ -951,7 +977,7 @@
         </div>
     </section>
 
-    <!-- Shakha Geet Sangrah (100% Intact + Audio Support) -->
+    <!-- Shakha Geet Sangrah -->
     <section id="geet" class="special-section">
         <h2>🎵 शाखा गीत संग्रह (प्रेरक देशभक्ति गीत)</h2>
         <p class="section-desc">शाखा की बैठकों और कार्यक्रमों में सामूहिक रूप से गाए जाने वाले देशभक्ति और कर्तव्य भावना से परिपूर्ण गीत:</p>
@@ -974,7 +1000,7 @@
                 <div class="audio-player-container">
                     <audio controls>
                         <source src="shakha_geet2.mp3" type="audio/mpeg">
-                        आपका ब्राउज़र ऑडियो प्लेयर को सपोर्ट नहीं करता।
+                        आपका ब्राउज़र ऑडियो प्लेयर को सपोर्ट नहीं करता。
                     </audio>
                 </div>
             </div>
@@ -991,7 +1017,7 @@
         </div>
     </section>
 
-    <!-- Gallery Section (Ensures fallback images always look correct) -->
+    <!-- Photo Gallery -->
     <section id="gallery" class="special-section">
         <h2>📷 फोटो गैलरी (शाखा गतिविधियाँ)</h2>
         <p class="section-desc">MS भोमिया जी शाखा भवाद की गतिविधियों, पथ संचलन, खेल, उत्सव और सेवा कार्यों की कुछ झलकियाँ (तस्वीर पर क्लिक करें):</p>
@@ -1011,7 +1037,7 @@
         </div>
     </section>
 
-    <!-- Contact & Register Form (100% Intact as requested) -->
+    <!-- Contact & Register -->
     <section id="contact" class="special-section">
         <h2>📞 संपर्क करें व शाखा से जुड़ें</h2>
         <p class="section-desc">भवाद क्षेत्र में संघ के सेवा कार्यों से जुड़ने, दैनिक शाखा में सम्मिलित होने या किसी पूछताछ हेतु संपर्क स्थापित करें:</p>
@@ -1053,7 +1079,6 @@
 
 </div>
 
-<!-- Image Lightbox Modal -->
 <div id="imageLightbox" class="modal">
     <span class="close-modal" onclick="closeLightbox()">&times;</span>
     <img class="modal-content" id="lightboxImg">
@@ -1069,7 +1094,6 @@
 <a href="https://wa.me/919351449562" class="whatsapp" target="_blank">💬</a>
 
 <script>
-// Array of inspirational quotes
 const rssQuotes = [
     {
         quote: "हमारा ध्येय किसी एक वर्ग का उत्थान नहीं, अपितु संपूर्ण हिंदू समाज को संगठित कर भारत को विश्वगुरु के परम वैभवशाली शिखर पर ले जाना है।",
@@ -1100,7 +1124,6 @@ function toggleMobileMenu() {
     navMenu.classList.toggle('active');
 }
 
-// Banner Image Slider logic
 let slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 let slideInterval = setInterval(nextSlide, 5000);
@@ -1121,7 +1144,6 @@ function prevSlide() {
     showSlide(currentSlide - 1);
 }
 
-// Drag / Swipe Events for Slider
 const sliderElement = document.getElementById('dragSlider');
 
 if (sliderElement) {
@@ -1150,7 +1172,6 @@ if (sliderElement) {
     });
 }
 
-// Lightbox Modal for Photo Gallery
 function openLightbox(element) {
     const modal = document.getElementById('imageLightbox');
     const modalImg = document.getElementById('lightboxImg');
@@ -1162,7 +1183,6 @@ function closeLightbox() {
     document.getElementById('imageLightbox').style.display = "none";
 }
 
-// Handle Form Submission
 function handleFormSubmit(event) {
     event.preventDefault();
     const name = document.getElementById('fullName').value;
