@@ -63,6 +63,7 @@
             font-weight: 300;
         }
 
+        /* Navigation */
         nav {
             background-color: var(--white);
             position: sticky;
@@ -82,15 +83,14 @@
             align-items: center;
             width: 100%;
             max-width: 1200px;
-            flex-wrap: wrap;
         }
 
         nav a {
             color: var(--text-dark);
             text-decoration: none;
             font-weight: bold;
-            padding: 12px 15px;
-            font-size: 0.9rem;
+            padding: 15px 18px;
+            font-size: 0.95rem;
             transition: var(--transition);
             display: inline-block;
             border-bottom: 3px solid transparent;
@@ -122,6 +122,7 @@
             padding: 30px 20px;
         }
 
+        /* Quote Banner */
         .quote-banner {
             background: var(--white);
             border-left: 6px solid var(--primary-color);
@@ -144,6 +145,7 @@
             font-size: 1rem;
         }
 
+        /* Slider */
         .slider-container {
             width: 100%;
             height: 380px;
@@ -188,6 +190,12 @@
             color: #fff;
         }
 
+        .slide-content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* Details (Prarthana Box) */
         details {
             background: var(--white);
             border: 1px solid var(--secondary-color);
@@ -216,6 +224,7 @@
         summary::after {
             content: "➕";
             font-size: 1rem;
+            transition: var(--transition);
         }
 
         details[open] summary::after {
@@ -245,177 +254,12 @@
             color: var(--text-muted);
         }
 
-        .special-section {
-            padding: 40px 25px;
-            background: var(--white);
-            border-radius: 16px;
-            margin-bottom: 35px;
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-
-        .special-section h2 {
-            color: var(--primary-dark);
-            font-size: 2rem;
-            margin-bottom: 15px;
-            display: inline-block;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .special-section h2::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
-        }
-
-        .section-desc {
-            color: var(--text-muted);
-            max-width: 750px;
-            margin: 0 auto 30px auto;
+        .prarthana-meaning p {
+            margin-bottom: 12px;
             font-size: 1.05rem;
         }
 
-        /* Foundational Guides / Founder Grid */
-        .founders-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 25px;
-            margin-top: 25px;
-            align-items: stretch;
-        }
-
-        .prerna-grid, .utsav-grid, .song-box {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .prerna-card, .utsav-card, .song-card {
-            background: var(--card-bg);
-            border: 1px solid #ffe8cc;
-            border-radius: 12px;
-            padding: 25px;
-            text-align: left;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-        }
-
-        .prerna-card:hover, .utsav-card:hover, .song-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(230, 81, 0, 0.12);
-            border-color: var(--primary-color);
-        }
-
-        .image-box-wrapper {
-            width: 100%;
-            height: 250px;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 15px;
-            border: 2px solid var(--secondary-color);
-            background: #fff;
-        }
-
-        .prerna-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .bharat-mata-wrapper {
-            border: 3px solid var(--primary-color);
-            box-shadow: 0 0 15px rgba(255, 111, 0, 0.3);
-        }
-
-        .prerna-card h3 {
-            color: var(--text-dark);
-            font-size: 1.35rem;
-            margin-bottom: 5px;
-        }
-
-        .prerna-title {
-            display: inline-block;
-            color: var(--primary-dark);
-            font-size: 0.85rem;
-            font-weight: bold;
-            margin-bottom: 12px;
-            background: #fff3e0;
-            padding: 3px 10px;
-            border-radius: 15px;
-        }
-
-        /* Organizational Structure Tables */
-        .org-info-header {
-            background: linear-gradient(90deg, #ff6f00, #e65100);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-
-        .toli-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            text-align: left;
-        }
-
-        .toli-box {
-            background: #fff8f0;
-            border: 1px solid #ffe0b2;
-            border-radius: 10px;
-            padding: 20px;
-        }
-
-        .toli-box h3 {
-            color: var(--primary-dark);
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 5px;
-        }
-
-        .toli-box ul {
-            list-style: none;
-        }
-
-        .toli-box li {
-            padding: 6px 0;
-            border-bottom: 1px dashed #ffd8b3;
-            font-size: 0.98rem;
-        }
-
-        .toli-box li:last-child {
-            border-bottom: none;
-        }
-
-        .instruction-box {
-            background: #fff3e0;
-            border-left: 5px solid var(--primary-color);
-            padding: 15px;
-            margin-top: 25px;
-            border-radius: 6px;
-            text-align: left;
-            font-size: 1.05rem;
-        }
-
+        /* Side-By-Side Columns Layout */
         .two-column-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -445,6 +289,7 @@
 
         .column-box ul {
             list-style-type: none;
+            padding-left: 0;
         }
 
         .column-box li {
@@ -453,42 +298,313 @@
             border-bottom: 1px dashed #ffe5cc;
         }
 
+        .column-box li:last-child {
+            border-bottom: none;
+        }
+
+        /* Read More Links */
         .read-more-link {
             color: var(--primary-dark);
             font-weight: bold;
-            cursor: pointer;
+            text-decoration: none;
             font-size: 0.9rem;
+            cursor: pointer;
             display: inline-block;
             margin-top: 5px;
+            transition: var(--transition);
         }
 
-        /* Song Lyrics Accordion */
-        .lyrics-box {
-            margin-top: 15px;
-            background: #fff8f0;
-            padding: 15px;
+        .read-more-link:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        /* Universal Special Section */
+        .special-section {
+            padding: 50px 25px;
+            background: var(--white);
+            border-radius: 16px;
+            margin-bottom: 35px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .special-section h2 {
+            color: var(--primary-dark);
+            font-size: 2.1rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .special-section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+            font-size: 1.1rem;
+        }
+
+        /* Grids */
+        .prerna-grid, .utsav-grid, .feature-box, .song-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        /* Cards */
+        .prerna-card, .utsav-card, .feature-card, .song-card {
+            background: var(--card-bg);
+            border: 1px solid #ffe8cc;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: left;
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .prerna-card:hover, .utsav-card:hover, .feature-card:hover, .song-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(230, 81, 0, 0.12);
+            border-color: var(--primary-color);
+        }
+
+        .image-box-wrapper {
+            width: 100%;
+            height: 220px;
             border-radius: 8px;
-            border-left: 4px solid var(--primary-color);
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .prerna-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .prerna-card h3 {
+            color: var(--text-dark);
+            font-size: 1.35rem;
+            margin-bottom: 5px;
+        }
+
+        .prerna-title {
+            display: inline-block;
+            color: var(--primary-dark);
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            background: #fff3e0;
+            padding: 3px 10px;
+            border-radius: 15px;
+        }
+
+        .utsav-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--primary-color);
+            color: var(--white);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
             font-size: 0.95rem;
-            line-height: 1.8;
-            white-space: pre-line;
-            display: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        .utsav-date {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--primary-dark);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .icon {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .song-card h3 {
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .audio-player-container {
+            margin-top: 15px;
+        }
+
+        audio {
+            width: 100%;
+            height: 35px;
+            outline: none;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 180px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 3px solid var(--white);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.04);
+            border-color: var(--primary-color);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Contact Box Styles */
+        .contact-section-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .contact-info {
+            background: #ffe0b2;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            background: var(--white);
+            border: 1px solid var(--secondary-color);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form h3 {
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(255, 111, 0, 0.2);
         }
 
         button, .btn {
             background: var(--primary-color);
             color: var(--white);
             border: none;
-            padding: 10px 20px;
+            padding: 10px 22px;
             border-radius: 6px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
             transition: var(--transition);
+            text-align: center;
+            width: fit-content;
         }
 
         button:hover, .btn:hover {
             background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #2d1b10;
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            opacity: 0.8;
         }
 
         .whatsapp {
@@ -506,8 +622,39 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             z-index: 1000;
             text-decoration: none;
+            transition: var(--transition);
         }
 
+        .whatsapp:hover {
+            transform: scale(1.1) rotate(15deg);
+        }
+
+        /* Lightbox Image Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 75vh;
+            object-fit: contain;
+            border: 4px solid var(--white);
+            border-radius: 8px;
+            animation: zoomIn 0.3s;
+        }
+
+        /* Dynamic Informational Modal */
         .info-modal {
             display: none;
             position: fixed;
@@ -529,10 +676,21 @@
             padding: 30px;
             border-radius: 16px;
             width: 90%;
-            max-width: 650px;
+            max-width: 600px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             position: relative;
+            animation: slideDown 0.4s ease-out;
             border-top: 8px solid var(--primary-color);
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
         .close-info-modal {
@@ -543,6 +701,11 @@
             font-size: 28px;
             font-weight: bold;
             cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-info-modal:hover {
+            color: var(--primary-dark);
         }
 
         .info-modal-title {
@@ -554,26 +717,63 @@
         }
 
         .info-modal-body {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             line-height: 1.8;
             color: var(--text-dark);
             max-height: 60vh;
             overflow-y: auto;
+            padding-right: 5px;
         }
 
-        footer {
-            background: #2d1b10;
-            color: var(--white);
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
-        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav {
+                height: auto;
+                padding: 10px 20px;
+            }
 
-        @media (max-width: 900px) {
-            .founders-grid {
+            .menu-toggle {
+                display: flex;
+                margin-left: auto;
+            }
+
+            .nav-container {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-container.active {
+                display: flex;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+                padding: 12px 0;
+                border-bottom: 1px solid #eee;
+            }
+
+            .slider-container {
+                height: 240px;
+            }
+
+            .special-section {
+                padding: 30px 15px;
+            }
+
+            .special-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .two-column-layout {
                 grid-template-columns: 1fr;
             }
-            .two-column-layout {
+
+            .contact-section-layout {
                 grid-template-columns: 1fr;
             }
         }
@@ -585,7 +785,7 @@
 
 <header>
     <h1>🚩 MS भोमिया जी शाखा भवाद</h1>
-    <p>संयुक्त विद्यार्थी शाखा | बावड़ी खंड | बिलाड़ा जिला | जोधपुर विभाग</p>
+    <p>पवित्र ध्येय, अखंड साधना और राष्ट्र निर्माण | जोधपुर विभाग</p>
 </header>
 
 <nav>
@@ -597,11 +797,13 @@
     <div class="nav-container" id="nav-menu">
         <a href="#dragSlider" onclick="toggleMobileMenu()">गृह</a>
         <a href="#prarthana" onclick="toggleMobileMenu()">प्रार्थना</a>
-        <a href="#founders-section" onclick="toggleMobileMenu()">संस्थापक व मार्गदर्शक</a>
-        <a href="#prerna-srot" onclick="toggleMobileMenu()">प्रेरणा स्रोत</a>
-        <a href="#sakha-toli" onclick="toggleMobileMenu()">शाखा टोली विवरण</a>
+        <a href="#mantra-sangrah" onclick="toggleMobileMenu()">संघ मंत्र</a>
         <a href="#sharirik-boudhik" onclick="toggleMobileMenu()">शारीरिक व बौद्धिक</a>
+        <a href="#prerna-srot" onclick="toggleMobileMenu()">प्रेरणा स्रोत</a>
+        <a href="#utsav" onclick="toggleMobileMenu()">उत्सव</a>
+        <a href="#ghosh" onclick="toggleMobileMenu()">घोष</a>
         <a href="#geet" onclick="toggleMobileMenu()">गीत संग्रह</a>
+        <a href="#gallery" onclick="toggleMobileMenu()">गैलरी</a>
         <a href="#contact" onclick="toggleMobileMenu()">संपर्क</a>
     </div>
 </nav>
@@ -615,16 +817,22 @@
     </div>
 
     <div class="slider-container" id="dragSlider">
-        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bharat_Mata.jpg/800px-Bharat_Mata.jpg');">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gallery1.jpg');">
             <div class="slide-content">
                 <h2>संघे शक्ति कलियुगे</h2>
                 <p>संगठित समाज ही सशक्त राष्ट्र का आधार है।</p>
             </div>
         </div>
-        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Keshav_Baliram_Hedgewar.jpg/800px-Keshav_Baliram_Hedgewar.jpg');">
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gallery2.jpg');">
             <div class="slide-content">
-                <h2>दैनिक शाखा - भवाद</h2>
+                <h2>दैनिक शाखा</h2>
                 <p>राष्ट्र सेवा और सुदृढ़ चरित्र निर्माण की अनुपम कार्यशाला।</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gallery3.jpg');">
+            <div class="slide-content">
+                <h2>शारीरिक व बौद्धिक विकास</h2>
+                <p>मैदानी खेलों, योग, सुभाषितों और राष्ट्र चिंतन द्वारा सर्वांगीण विकास।</p>
             </div>
         </div>
     </div>
@@ -660,163 +868,76 @@
                 
                 ॥ भारत माता की जय ॥
             </div>
+            
             <div class="prarthana-meaning">
                 <strong>संपूर्ण हिंदी भावार्थ:</strong><br><br>
-                <p><strong>1.</strong> हे वत्सल मातृभूमि! मैं आपको सदा नमस्कार करता हूँ। हे हिंदू भूमि! आपके ही आँचल में मैं सुखपूर्वक बड़ा हुआ हूँ। हे महामंगलमयी अत्यंत पुण्यभूमि! आपके ही पवित्र राष्ट्रीय कार्य के लिए मेरा यह शरीर समर्पित हो जाए, आपको बारम्बार नमस्कार है।</p>
+                <p><strong>1.</strong> हे वत्सल (प्यारी) मातृभूमि! मैं आपको सदा नमस्कार करता हूँ। हे हिंदू भूमि! आपके ही आँचल में मैं सुखपूर्वक बड़ा हुआ हूँ। हे महामंगलमयी अत्यंत पुण्यभूमि! आपके ही पवित्र राष्ट्रीय कार्य के लिए मेरा यह शरीर समर्पित हो जाए,आपको बारम्बार नमस्कार है।</p>
                 <p><strong>2.</strong> हे सर्वशक्तिमान ईश्वर! हम इस परम पवित्र हिंदू राष्ट्र के अंग स्वरूप सभी स्वयंसेवक आपको आदरपूर्वक प्रणाम करते हैं। हम सब आपके ही ईश्वरीय राष्ट्रीय कार्य के लिए कमर कसकर पूर्णतः तैयार हुए हैं, हमें इस कार्य को सफलतापूर्वक पूरा करने के लिए अपना शुभ आशीर्वाद प्रदान करें।</p>
-                <p><strong>3.</strong> हे प्रभु! हमें ऐसी अजेय और उत्कृष्ट शक्ति प्रदान करें जिसे संपूर्ण विश्व की कोई भी आसुरी शक्ति पराजित न कर सके, और ऐसा उज्ज्वल व पवित्र चरित्र (शील) दें जिसके सम्मुख संपूर्ण संसार स्वतः ही विनम्र हो जाए।</p>
+                <p><strong>3.</strong> हे प्रभु! हमें ऐसी अजेय और उत्कृष्ट शक्ति प्रदान करें जिसे संपूर्ण विश्व की कोई भी आसुरी शक्ति पराजित न कर सके, और ऐसा उज्ज्वल व पवित्र चरित्र (शील) दें जिसके सम्मुख संपूर्ण संसार स्वतः ही विनम्र हो जाए। हमें वह ज्ञान और बुद्धि दें जो हमारे द्वारा स्वयं चुने गए इस काँटों भरे मार्ग को सुगम और प्रशस्त बना सके।</p>
+                <p><strong>4.</strong> हमारे लौकिक अभ्युदय (उन्नति) और परम कल्याण (मोक्ष) को प्राप्त करने का एकमात्र श्रेष्ठ साधन 'वीरव्रत' (साधना) हमारे अंतःकरण में सदा जागृत रहे। हमारे हृदयों में अपने पवित्र लक्ष्य के प्रति अटूट एवं अक्षय ध्येयनिष्ठा हमेशा तीव्र रूप से प्रज्ज्वलित रहे।</p>
+                <p><strong>5.</strong> हमारी यह अत्यंत संगठित कार्यशक्ति निरंतर विजय को प्राप्त करे और अपने उत्कृष्ट सनातन धर्म व संस्कृति का संरक्षण करते हुए, इस राष्ट्र को वैभव के उच्चतम शिखर पर ले जाने में पूरी तरह समर्थ हो। हे ईश्वर! आपके परम आशीर्वाद से हमारी यह सामूहिक शक्ति अति शीघ्र सफल हो।</p>
             </div>
         </div>
     </details>
 
-    <section id="founders-section" class="special-section">
-        <h2>🚩 संघ संस्थापक, परम पूजनीय मार्गदर्शक एवं भारत माता</h2>
-        <p class="section-desc">राष्ट्रीय स्वयंसेवक संघ की वैचारिक एवं सांगठनिक नींव रखने वाले आद्य सरसंघचालक, द्वितीय सरसंघचालक एवं हमारी पूज्य भारत माता:</p>
-
-        <div class="founders-grid">
-            <div class="prerna-card">
-                <div>
-                    <div class="image-box-wrapper">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Keshav_Baliram_Hedgewar.jpg/480px-Keshav_Baliram_Hedgewar.jpg" alt="डॉ. केशवराव बळिराम हेडगेवार" class="prerna-img">
-                    </div>
-                    <h3>डॉ. केशवराव बळिराम हेडगेवार</h3>
-                    <span class="prerna-title">🚩 आद्य सरसंघचालक एवं संघ संस्थापक</span>
-                    <p>परम पूजनीय डॉक्टर जी ने वर्ष 1925 में विजयादशमी के पावन पर्व पर नागपुर में राष्ट्रीय स्वयंसेवक संघ की नींव रखी। उन्होंने संपूर्ण जीवन राष्ट्र को समर्पित कर दिया।</p>
-                </div>
-                <button onclick="openDetailsModal('डॉ. केशवराव बळिराम हेडगेवार (डॉक्टर जी)', '<b>जन्म:</b> 1 अप्रैल 1889 (नागपुर)<br><b>मृत्यु:</b> 21 जून 1940<br><br><b>विस्तृत जीवन परिचय:</b><br>डॉ. हेडगेवार जी बचपन से ही प्रखर देशभक्त थे। विक्टोरिया रानी के शासन के 60 वर्ष पूरे होने पर बांटी गई मिठाई को उन्होंने कचरे के डिब्बे में फेंक दिया था। कोलकाता से डॉक्टरी (LMS) की पढ़ाई पूरी करने के बाद उन्होंने चिकित्सा व्यवसाय करने के बजाय अपना पूरा जीवन स्वतंत्रता संग्राम और समाज संगठन में समर्पित कर दिया।<br><br>उन्होंने अनुभव किया कि भारत की पराधीनता का मूल कारण समाज में फैले असंगठन, छुआछूत और आत्मविस्मृति हैं। 1925 की विजयादशमी को उन्होंने राष्ट्रीय स्वयंसेवक संघ की स्थापना की। उन्होंने दैनिक शाखा की अनूठी कार्यपद्धति विकसित की, जिसने देश को लाखों चरित्रवान, अनुशासित और देशभक्त स्वयंसेवक दिए।')">पूरा जीवन परिचय पढ़ें</button>
+    <details id="mantra-sangrah">
+        <summary>🚩 महत्वपूर्ण संघ मंत्र एवं भावार्थ</summary>
+        <div class="prarthana-content">
+            <h3 style="color: var(--primary-dark); border-bottom: 2px solid var(--secondary-color); padding-bottom: 5px; margin-bottom: 15px;">१. संगठन मंत्र (ऋग्वेद)</h3>
+            <div class="shlok-box">
+                सङ्गच्छध्वं संवदध्वं सं वो मनांसि जानताम् ।<br>
+                देवा भागं यथा पूर्वे सञ्जानाना उपासते ॥१॥<br><br>
+                समानो मन्त्रः समितिः समानी समानं मनः सह चित्तमेषाम् ।<br>
+                समानं मन्त्रमभि मन्त्रये वः समानेन वो हविषा जुहोमि ॥२॥<br><br>
+                समानी व आकूतिः समाना हृदयानि वः ।<br>
+                मन्दमस्तु वो मनो यथा वः सुसहासति ॥३॥
+            </div>
+            <div class="prarthana-meaning" style="border-top: 1px dashed var(--secondary-color); padding-top: 10px; margin-bottom: 30px;">
+                <strong>हिंदी भावार्थ:</strong> हम सब एक साथ मिलकर चलें, प्रेमपूर्वक एक-दूसरे से संवाद करें, और हमारे मन एक समान होकर ज्ञान प्राप्त करें। हमारी परिषदें (बैठकें) समान हों, हमारे मन और अंतःकरण मिलकर एक हों। हमारे संकल्प और हमारे हृदय एक समान हों, जिससे हम सबके बीच उत्तम एकता और भाईचारा सदैव बना रहे।
             </div>
 
-            <div class="prerna-card">
-                <div>
-                    <div class="image-box-wrapper bharat-mata-wrapper">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bharat_Mata.jpg/480px-Bharat_Mata.jpg" alt="भारत माता" class="prerna-img">
-                    </div>
-                    <h3>परम पूज्य भारत माता</h3>
-                    <span class="prerna-title">🚩 राष्ट्र स्वरूप एवं सर्वोच्च आराध्य</span>
-                    <p>संघ में भारत माता को जीवित चेतना एवं आराध्य माना गया है। 'नमस्ते सदा वत्सले मातृभूमे' प्रार्थना से स्वयंसेवक दैनिक रूप से भारत माता की वंदना करते हैं।</p>
-                </div>
-                <button onclick="openDetailsModal('परम पूज्य भारत माता', '<b>राष्ट्रीय स्वयंसेवक संघ में भारत माता का स्थान:</b><br><br>राष्ट्रीय स्वयंसेवक संघ में भारत माता केवल भूगोल का मानचित्र नहीं, अपितु एक सजीव राष्ट्र-पुरुष और आध्यात्मिक चेतना हैं। <br><br>भारत माता का स्वरूप भगवा ध्वज धारण किए, सिंह पर सवार, हाथ में अक्षय पात्र या वरद मुद्रा के साथ अभय प्रदान करने वाला रूप है। संघ की दैनिक शाखा का प्रत्येक कार्यक्रम - ध्वजारोहण से लेकर प्रार्थना और ध्वजावतरण तक - भारत माता की सेवा और उनके परम वैभव की प्राप्ति के लिए समर्पित होता है। <br><br>संघ की मान्यता है कि जब तक प्रत्येक नागरिक भारत भूमि को अपनी माता और स्वयं को उसका पुत्र मानेगा (माता भूमिः पुत्रोऽहं पृथिव्याः), तब तक इस देश को कोई पराजित नहीं कर सकता।')">विस्तृत भावार्थ पढ़ें</button>
+            <h3 style="color: var(--primary-dark); border-bottom: 2px solid var(--secondary-color); padding-bottom: 5px; margin-bottom: 15px;">२. एकात्मता मंत्र (मुख्य अंश)</h3>
+            <div class="shlok-box">
+                यं वैदिका मन्त्रदृशः पुराणाः इन्द्रं यमं मातरिश्वानमाहुः ।<br>
+                वेदान्तिनोऽनिर्वचनीयमेकम् यं ब्रह्मशब्देन विनिर्दिशन्ति ॥१॥<br><br>
+                शैवायमीशं शिव इत्यवोचन् यं वैष्णवा विष्णुरिति स्तुवन्ति ।<br>
+                बुद्धस्तथार्हन्निति बौद्धजैनाः सत्‌श्रीयकालेति च सिख्खसन्तः ॥२॥<br><br>
+                शास्तेति केचित् कतिचित् कुमारः स्वामीति मातेति यमभियन्ति ।<br>
+                स एक एव प्रभुद्वितीयः स्वयं मङ्गलदश धातु ॥३॥
+            </div>
+            <div class="prarthana-meaning" style="border-top: 1px dashed var(--secondary-color); padding-top: 10px; margin-bottom: 30px;">
+                <strong>हिंदी भावार्थ:</strong> जिस एक परम सत्य को ऋषियों ने इंद्र, यम, वायु कहा; वेदान्तियों ने 'ब्रह्म', शैव 'शिव', वैष्णव 'विष्णु', बौद्ध 'बुद्ध', जैन 'अर्हन्त' और सिख 'सत् श्री अकाल' कहते हैं—वह अद्वितीय परम कल्याणकारी ईश्वर हम सभी को उत्तम मंगल प्रदान करे।
             </div>
 
-            <div class="prerna-card">
-                <div>
-                    <div class="image-box-wrapper">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Madhav_Sadashiv_Golwalkar.jpg/480px-Madhav_Sadashiv_Golwalkar.jpg" alt="श्री माधवराव सदाशिवराव गोलवलकर (श्री गुरुजी)" class="prerna-img">
-                    </div>
-                    <h3>श्री माधवराव सदाशिवराव गोलवलकर</h3>
-                    <span class="prerna-title">🚩 द्वितीय सरसंघचालक (श्री गुरुजी)</span>
-                    <p>श्री गुरुजी ने 33 वर्षों तक संघ का मार्गदर्शक नेतृत्व किया। उनके कार्यकाल में संघ का विस्तार अखिल भारतीय स्तर पर हुआ और विभिन्न क्षेत्रों में नए संगठन बने।</p>
-                </div>
-                <button onclick="openDetailsModal('माधवराव सदाशिवराव गोलवलकर (श्री गुरुजी)', '<b>जन्म:</b> 19 फरवरी 1906 (नागपुर)<br><b>मृत्यु:</b> 5 जून 1973<br><br><b>विस्तृत जीवन परिचय:</b><br>श्री गुरुजी अत्यंत प्रतिभाशाली, मेधावी और आध्यात्मिक प्रवृत्ति के थे। उन्होंने बनारस हिंदू विश्वविद्यालय (BHU) से प्राणीशास्त्र में एम.एससी. की और वहीं प्राध्यापक रहे, जहाँ विद्यार्थी उन्हें सम्मान से \'गुरुजी\' कहने लगे।<br><br>1936 में उन्होंने स्वामी अखंडानन्द जी से दीक्षा ली। डॉ. हेडगेवार जी के निधन के बाद 1940 में उन्होंने सरसंघचालक का दायित्व संभाला। उन्होंने 33 वर्षों तक निरंतर संपूर्ण भारत का भ्रमण कर संघ कार्य को घर-घर पहुँचाया। 1947 के विभाजन के समय शरणार्थियों की सहायता, कश्मीर विलय में महत्वपूर्ण भूमिका, और विश्व हिंदू परिषद, अखिल भारतीय विद्यार्थी परिषद जैसे राष्ट्रवादी संगठनों की स्थापना में उनका अभूतपूर्व योगदान रहा।')">पूरा जीवन परिचय पढ़ें</button>
+            <h3 style="color: var(--primary-dark); border-bottom: 2px solid var(--secondary-color); padding-bottom: 5px; margin-bottom: 15px;">३. कल्याण मंत्र</h3>
+            <div class="shlok-box">
+                सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः ।<br>
+                सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत् ॥<br><br>
+                ॐ शान्तिः शान्तिः शान्तिः ॥
+            </div>
+            <div class="prarthana-meaning" style="border-top: 1px dashed var(--secondary-color); padding-top: 10px;">
+                <strong>हिंदी भावार्थ:</strong> इस संसार में सभी सुखी हों, सभी पूर्णतः निरोगी (स्वस्थ) रहें, सभी का कल्याण हो और किसी को भी कभी कोई कष्ट या दुःख प्राप्त न हो।
             </div>
         </div>
-    </section>
-
-    <section id="prerna-srot" class="special-section">
-        <h2>✨ हमारे प्रेरणा स्रोत (ऐतिहासिक महापुरुष)</h2>
-        <p class="section-desc">हिंदवी स्वराज्य एवं स्वाभिमान के लिए अपने प्राणों की बाजी लगाने वाले अमर योद्धा:</p>
-        <div class="prerna-grid">
-            <div class="prerna-card">
-                <div>
-                    <div class="image-box-wrapper">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Chhatrapati_Shivaji_Maharaj_portrait.jpg/480px-Chhatrapati_Shivaji_Maharaj_portrait.jpg" alt="छत्रपति शिवाजी महाराज" class="prerna-img">
-                    </div>
-                    <h3>छत्रपति शिवाजी महाराज</h3>
-                    <span class="prerna-title">🚩 हिंदवी स्वराज्य संस्थापक</span>
-                    <p>महाराज ने अपनी अदम्य वीरता, कुशल छापामार सैन्य नीति और सुदृढ़ संगठन शक्ति से मुगलों के आततायी साम्राज्य को ध्वस्त किया और हिंदवी स्वराज्य की नींव रखी।</p>
-                </div>
-                <button onclick="openDetailsModal('छत्रपति शिवाजी महाराज', '<b>जन्म:</b> 19 फरवरी 1630 (शिवनेरी दुर्ग)<br><b>राज्याभिषेक:</b> 6 जून 1674 (रायगढ़)<br><br><b>विस्तृत जीवन परिचय:</b><br>छत्रपति शिवाजी महाराज का जीवन वीरता, स्वाभिमान और सुशासन का उत्कृष्ट उदाहरण है। अपनी माता जीजाबाई और गुरु समर्थ रामदास जी की प्रेरणा से उन्होंने किशोरावस्था में ही रायरेश्वर मंदिर में स्वराज्य की शपथ ली।<br><br>उन्होंने आदिलशाही और मुगल साम्राज्य की विशाल सेनाओं को \'गनिमी कावा\' (छापामार युद्ध) नीति से परास्त किया। उन्होंने एक सुसंगठित नौसेना बनाई, अष्टप्रधान मंडल द्वारा कुशल प्रशासनिक व्यवस्था दी और सभी धर्मों व नारियों का सम्मान करने का आदर्श प्रस्तुत किया। संघ उन्हें अपने मुख्य प्रेरणा स्रोतों में पूजनीय मानता है।')">पूरा जीवन परिचय पढ़ें</button>
-            </div>
-
-            <div class="prerna-card">
-                <div>
-                    <div class="image-box-wrapper">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Maharana_Pratap_Portrait.jpg/480px-Maharana_Pratap_Portrait.jpg" alt="महाराणा प्रताप" class="prerna-img">
-                    </div>
-                    <h3>वीर शिरोमणि महाराणा प्रताप</h3>
-                    <span class="prerna-title">🚩 मेवाड़ गौरव व स्वाभिमान प्रतीक</span>
-                    <p>महाराणा प्रताप ने अकबर की अधीनता स्वीकार करने के बजाय अरावली की पहाड़ियों में घास की रोटी खाना स्वीकार किया, परंतु राष्ट्र और धर्म का सिर झुकने नहीं दिया।</p>
-                </div>
-                <button onclick="openDetailsModal('महाराणा प्रताप', '<b>जन्म:</b> 9 मई 1540 (कुंभलगढ़)<br><b>पुण्यतिथि:</b> 19 जनवरी 1597<br><br><b>विस्तृत जीवन परिचय:</b><br>मेवाड़ के मुकुटमणि महाराणा प्रताप स्वाभिमान, स्वतंत्रता और धर्मरक्षा के सर्वोच्च प्रतीक हैं। 1576 के हल्दीघाटी युद्ध में उन्होंने अकबर की विशाल सेना का डटकर मुकाबला किया।<br><br>हल्दीघाटी के पश्चात जंगलों में कठिन जीवन व्यतीत करते हुए भी उन्होंने भील समुदाय और दानवीर भामाशाह के सहयोग से अपनी सेना को पुनः संगठित किया और मेवाड़ के अधिकांश दुर्गों को मुगलों से मुक्त कराया। उनका प्रिय घोड़ा चेतक और उनका स्वाभिमानी जीवन आज भी देशभक्ति का संचार करता है।')">पूरा जीवन परिचय पढ़ें</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="sakha-toli" class="special-section">
-        <h2>📋 शाखा संरचना एवं टोली दायित्व विवरण</h2>
-        <p class="section-desc">सत्र / वर्ष: 2026-27 | स्थानः भवाद</p>
-
-        <div class="org-info-header">
-            <div>📍 <b>शाखा का नाम:</b> MS भोमिया जी, संयुक्त विद्यार्थी शाखा भवाद</div>
-            <div>🏛️ <b>मण्डल:</b> भवाद जुड़ मंडल</div>
-            <div>🧱 <b>खंड:</b> बावड़ी</div>
-            <div>🗺️ <b>जिला:</b> बिलाड़ा जिला</div>
-        </div>
-
-        <div class="toli-grid">
-            <div class="toli-box">
-                <h3>👑 1. मुख्य अधिकारी</h3>
-                <ul>
-                    <li><b>1. शाखा पालक:</b> श्रीमान दिव्यांशु जी</li>
-                    <li><b>2. शाखा कार्यवाह:</b> श्रीमान ईश्वर जी</li>
-                    <li><b>3. मुख्य शिक्षक:</b> श्रीमान लोकेश जी</li>
-                    <li><b>4. ध्वज प्रमुख:</b> श्रीमान कुलदीप जी</li>
-                </ul>
-            </div>
-
-            <div class="toli-box">
-                <h3>🚩 2. गण शिक्षक टोली (कुल 6)</h3>
-                <ul>
-                    <li><b>1. प्रथम गणशिक्षक:</b> श्रीमान कैलाश जी</li>
-                    <li><b>2. द्वितीय:</b> श्रीमान रवि जी</li>
-                    <li><b>3. तृतीय:</b> श्रीमान विनोद जी</li>
-                    <li><b>4. चतुर्थ:</b> श्रीमान मगराज जी</li>
-                    <li><b>5. पंचम:</b> श्रीमान डुंगर जी</li>
-                    <li><b>6. षष्ठ:</b> श्रीमान कुनाल जी</li>
-                </ul>
-            </div>
-
-            <div class="toli-box">
-                <h3>🤝 3. गटनायक टोली (कुल 4)</h3>
-                <ul>
-                    <li><b>1. गटनायक प्रथम:</b> श्रीमान मयंक जी</li>
-                    <li><b>2. द्वितीय:</b> श्रीमान अभिषेक जी</li>
-                    <li><b>3. तृतीया:</b> श्रीमान आशीष जी</li>
-                    <li><b>4. चतुर्थ:</b> श्रीमान नवीन जी</li>
-                </ul>
-            </div>
-
-            <div class="toli-box">
-                <h3>🎯 4. विशेष विभाग प्रमुख</h3>
-                <ul>
-                    <li><b>1. घोष प्रमुख:</b> श्रीमान विजय जी</li>
-                    <li><b>2. पद वेश प्रमुख:</b> श्रीमान मोहित जी</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="instruction-box">
-            <b>📌 मुख्य निर्देश:</b> गण शिक्षक अपनी टोली में उपस्थिति व अनुशासन की चिंता करेंगे, गटनायक स्वयंसेवकों से सतत संपर्क बनाए रखेंगे, एवं पद वेश प्रमुख सभी उत्सवों पर पूर्ण गणवेश सुनिश्चित करेंगे।
-        </div>
-    </section>
+    </details>
 
     <div class="two-column-layout" id="sharirik-boudhik">
         <div class="column-box">
             <div>
                 <h2>💪 शारीरिक विकास</h2>
-                <p style="margin-bottom: 15px; color: var(--text-muted);">दैनिक शाखा में स्वयंसेवकों के शारीरिक विकास हेतु विशेष गतिविधियाँ:</p>
+                <p style="margin-bottom: 15px; color: var(--text-muted);">दैनिक शाखा के माध्यम से स्वयंसेवकों के शारीरिक विकास हेतु विशेष गतिविधियाँ की जाती हैं:</p>
                 <ul>
                     <li>
-                        <strong>🏃 मैदानी खेल:</strong> कबड्डी, खो-खो, एवं संघ के पारम्परिक खेल।
-                        <br><span class="read-more-link" onclick="openDetailsModal('मैदानी खेल', 'मैदानी खेल संघ की शाखाओं का एक मुख्य और रोमांचक अंग हैं। कबड्डी, खो-खो, और अनेक पारंपरिक खेल बिना किसी महंगे उपकरण के खेले जाते हैं। यह खेल स्वयंसेवकों में आपसी तालमेल, निर्णय क्षमता, फुर्ती और टीम भावना को बढ़ावा देते हैं।')">और पढ़ें ➔</span>
+                        <strong>🏃 मैदानी खेल:</strong> कबड्डी, खो-खो, एवं संघ के पारम्परिक खेल जो सामूहिक भाईचारा बढ़ाते हैं।
+                        <br><span class="read-more-link" onclick="openDetailsModal('मैदानी खेल', 'मैदानी खेल संघ की शाखाओं का एक मुख्य और रोमांचक अंग हैं। कबड्डी, खो-खो, सिंह-बकरी और अनेक पारंपरिक खेल बिना किसी महंगे उपकरण के खेले जाते हैं। यह खेल स्वयंसेवकों में आपसी तालमेल, निर्णय लेने की क्षमता, फुर्ती और टीम भावना को बढ़ावा देते हैं।')">और पढ़ें ➔</span>
                     </li>
                     <li>
-                        <strong>🧘 योग व सूर्य नमस्कार:</strong> मन की एकाग्रता और शारीरिक लचीलेपन के लिए अभ्यास।
-                        <br><span class="read-more-link" onclick="openDetailsModal('योग व सूर्य नमस्कार', 'सूर्य नमस्कार और योगासनों का अभ्यास स्वयंसेवकों को शारीरिक रूप से वज्र के समान और मानसिक रूप से शांत बनाता है।')">और पढ़ें ➔</span>
+                        <strong>🧘 योग व सूर्य नमस्कार:</strong> मन की एकाग्रता और शारीरिक लचीलेपन के लिए नियमित योग अभ्यास।
+                        <br><span class="read-more-link" onclick="openDetailsModal('योग व सूर्य नमस्कार', 'सूर्य नमस्कार और योगासनों का अभ्यास स्वयंसेवकों को शारीरिक रूप से वज्र के समान और मानसिक रूप से शांत बनाता है। शाखा में नियमित रूप से होने वाले सूर्य नमस्कार से एकाग्रता, रक्त संचार और आंतरिक ऊर्जा का विकास होता है।')">और पढ़ें ➔</span>
                     </li>
                     <li>
-                        <strong>🛡️ दण्ड व नियुद्ध:</strong> आत्मरक्षा की विधाओं का व्यावहारिक प्रशिक्षण।
-                        <br><span class="read-more-link" onclick="openDetailsModal('दण्ड व नियुद्ध', 'दण्ड (लाठी) चलाना संघ का एक पारंपरिक अभ्यास है जो आत्मरक्षा के साथ-साथ अनुशासन और आत्मविश्वास सिखाता है।')">और पढ़ें ➔</span>
+                        <strong>🛡️ दण्ड व नियुद्ध:</strong> आत्मरक्षा की प्राचीन विधाओं का व्यावहारिक प्रशिक्षण।
+                        <br><span class="read-more-link" onclick="openDetailsModal('दण्ड व नियुद्ध', 'दण्ड (लाठी) चलाना संघ का एक पारंपरिक शारीरिक अभ्यास है जो आत्मरक्षा के साथ-साथ अनुशासन और आत्मविश्वास सिखाता है। नियुद्ध बिना किसी हथियार के आत्मरक्षा करने की कला है।')">और पढ़ें ➔</span>
                     </li>
                 </ul>
             </div>
@@ -825,87 +946,210 @@
         <div class="column-box">
             <div>
                 <h2>🧠 बौद्धिक विकास</h2>
-                <p style="margin-bottom: 15px; color: var(--text-muted);">स्वयंसेवकों के वैचारिक विकास हेतु शाखा में नियमित गतिविधियाँ:</p>
+                <p style="margin-bottom: 15px; color: var(--text-muted);">स्वयंसेवकों के मानसिक एवं वैचारिक विकास हेतु शाखा में नियमित चर्चाएं की जाती हैं:</p>
                 <ul>
                     <li>
                         <strong>📖 अमृतवचन व सुभाषित:</strong> महापुरुषों के प्रेरक वाक्य एवं नैतिक मूल्य।
-                        <br><span class="read-more-link" onclick="openDetailsModal('अमृतवचन व सुभाषित', 'प्रत्येक दिन शाखा के अंत में प्रेरक अमृतवचन और संस्कृत के सुभाषितों का उच्चारण किया जाता है।')">और पढ़ें ➔</span>
+                        <br><span class="read-more-link" onclick="openDetailsModal('अमृतवचन व सुभाषित', 'प्रत्येक दिन शाखा के अंत में प्रेरक अमृतवचन और संस्कृत के सुभाषितों का उच्चारण किया जाता है। ये सुभाषित स्वयंसेवकों को जीवन जीने की कला, राष्ट्रभक्ति, बड़ों का सम्मान और समाज सेवा के प्रति प्रेरित करते हैं।')">और पढ़ें ➔</span>
                     </li>
                     <li>
                         <strong>🗣️ बौद्धिक चर्चा:</strong> सामाजिक समरसता, राष्ट्रहित और समसामयिक विषयों पर संवाद।
-                        <br><span class="read-more-link" onclick="openDetailsModal('बौद्धिक चर्चा', 'शाखा की बैठकों में राष्ट्र निर्माण, भारतीय इतिहास, और समसामयिक विषयों पर सकारात्मक बौद्धic चर्चाएं होती हैं।')">और पढ़ें ➔</span>
+                        <br><span class="read-more-link" onclick="openDetailsModal('बौद्धिक चर्चा', 'शाखा की साप्ताहिक और दैनिक बैठकों में राष्ट्र निर्माण, भारतीय इतिहास, और समसामयिक विषयों पर सकारात्मक बौद्धिक चर्चाएं होती हैं। इससे स्वयंसेवकों का वैचारिक दृष्टिकोण स्पष्ट होता है।')">और पढ़ें ➔</span>
                     </li>
                     <li>
-                        <strong>🎭 कथा व प्रसंग:</strong> भारत के गौरवशाली इतिहास और क्रांतिकारियों की गाथाएं।
-                        <br><span class="read-more-link" onclick="openDetailsModal('कथा व प्रसंग', 'वीर सपूतों और स्वतंत्रता सेनानियों के जीवन की प्रेरक कहानियाँ शाखा में सुनाई जाती हैं।')">और पढ़ें ➔</span>
+                        <strong>🎭 कथा व प्रसंग:</strong> भारत के गौरवशाली इतिहास और क्रांतिकारियों की जीवन गाथाएं।
+                        <br><span class="read-more-link" onclick="openDetailsModal('कथा व प्रसंग', 'भारत माता के वीर सपूतों, स्वतंत्रता सेनानियों, और ऋषि-मुनियों के जीवन की प्रेरक कहानियाँ शाखा में सुनाई जाती हैं। ये प्रसंग स्वयंसेवकों के भीतर स्वाभिमान और साहस जगाते हैं।')">और पढ़ें ➔</span>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 
+    <section id="prerna-srot" class="special-section">
+        <h2>✨ हमारे प्रेरणा स्रोत (जीवन परिचय)</h2>
+        <p class="section-desc">राष्ट्रहित, धर्मरक्षा एवं सांस्कृतिक पुनरुत्थान के परम पुनीत पथ का मार्ग प्रशस्त करने वाले महापुरुष:</p>
+        <div class="prerna-grid">
+            <div class="prerna-card">
+                <div>
+                    <div class="image-box-wrapper">
+                        <img src="shivaji.jpg" alt="छत्रपति Shivaji Maharaj" class="prerna-img" onerror="this.src='https://images.unsplash.com/photo-1626761191288-75c3f30999aa?w=500&auto=format&fit=crop&q=60';">
+                    </div>
+                    <h3>छत्रपति शिवाजी महाराज</h3>
+                    <span class="prerna-title">🚩 हिंदवी स्वराज्य संस्थापक</span>
+                    <p>महाराज ने अपनी अदम्य वीरता, कुशल छापामार सैन्य नीति और सुदृढ़ संगठन शक्ति से मुगलों के आततायी साम्राज्य को ध्वस्त किया।</p>
+                </div>
+                <button onclick="openDetailsModal('छत्रपति शिवाजी महाराज', 'छत्रपति शिवाजी महाराज का जन्म 1630 में शिवनेरी दुर्ग में हुआ था। उन्होंने बाल्यकाल से ही विदेशी आक्रांताओं के खिलाफ संघर्ष का संकल्प लिया। अपनी माता जीजाबाई के मार्गदर्शन में उन्होंने छापामार युद्ध प्रणाली का विकास किया। उन्होंने हिंदवी स्वराज्य की नींव रखी।')">और पढ़ें</button>
+            </div>
+
+            <div class="prerna-card">
+                <div>
+                    <div class="image-box-wrapper">
+                        <img src="hedgewar.jpg" alt="डॉ. केशवराव बळिराम हेडगेवार" class="prerna-img" onerror="this.src='https://images.unsplash.com/photo-1590086782957-93c06ef51604?w=500&auto=format&fit=crop&q=60';">
+                    </div>
+                    <h3>डॉ. केशवराव बळिराम हेडगेवार</h3>
+                    <span class="prerna-title">🚩 संघ संस्थापक एवं आद्य सरसंघचालक</span>
+                    <p>1925 में विजयदशमी के शुभ अवसर पर राष्ट्रीय स्वयंसेवक संघ की स्थापना की।</p>
+                </div>
+                <button onclick="openDetailsModal('डॉ. केशवराव बळिराम हेडगेवार', 'डॉ. हेडगेवार जी का जन्म 1889 में नागपुर में हुआ था। स्वतंत्रता संग्राम में सक्रिय भाग लेने के बाद उन्होंने यह अनुभव किया कि देश की परतंत्रता का मूल कारण हिंदू समाज में संगठन और अनुशासन की कमी है। इसी विचार से उन्होंने 1925 में संघ की स्थापना की।')">और पढ़ें</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="utsav" class="special-section">
+        <h2>🎉 संघ के छह मुख्य उत्सव</h2>
+        <p class="section-desc">राष्ट्रीय स्वयंसेवक संघ वर्षभर में समाज जागरण और सांस्कृतिक चेतना हेतु ६ प्रमुख उत्सव मनाता है:</p>
+        <div class="utsav-grid">
+            <div class="utsav-card">
+                <div class="utsav-badge">१</div>
+                <h3>वर्षप्रतिपदा (हिन्दू नववर्ष)</h3>
+                <span class="utsav-date">🗓️ चैत्र शुक्ल प्रतिपदा</span>
+                <p>राष्ट्रीय स्वयंसेवक संघ के संस्थापक डॉ. हेडगेवार जी का जन्मदिवस। इस दिन आद्य सरसंघचालक प्रणाम दिया जाता है और हिंदू नववर्ष का स्वागत किया जाता है।</p>
+            </div>
+            <div class="utsav-card">
+                <div class="utsav-badge">२</div>
+                <h3>हिंदू साम्राज्य दिनोत्सव</h3>
+                <span class="utsav-date">🗓️ ज्येष्ठ शुक्ल त्रयोदशी</span>
+                <p>छत्रपति शिवाजी महाराज के राज्याभिषेक दिवस की स्मृति में। यह उत्सव राष्ट्र की स्वाधीनता और हिंदवी स्वराज्य की स्थापना का प्रतीक है।</p>
+            </div>
+            <div class="utsav-card">
+                <div class="utsav-badge">३</div>
+                <h3>गुरु पूर्णिमा</h3>
+                <span class="utsav-date">🗓️ आषाढ़ पूर्णिमा</span>
+                <p>संघ में किसी व्यक्ति को नहीं, अपितु 'पवित्र भगवा ध्वज' को परम गुरु माना गया है। इस दिन भगवा ध्वज का पूजन कर गुरु दक्षिणा अर्पित की जाती है।</p>
+            </div>
+            <div class="utsav-card">
+                <div class="utsav-badge">४</div>
+                <h3>रक्षाबंधन</h3>
+                <span class="utsav-date">🗓️ श्रावण पूर्णिमा</span>
+                <p>यह पर्व सामाजिक समरसता और समाज के प्रत्येक वर्ग की परस्पर रक्षा के संकल्प का प्रतीक है। स्वयंसेवक एक-दूसरे को भगवी राखी बांधते हैं।</p>
+            </div>
+            <div class="utsav-card">
+                <div class="utsav-badge">५</div>
+                <h3>विजयदशमी</h3>
+                <span class="utsav-date">🗓️ आश्विन शुक्ल दशमी</span>
+                <p>संघ का स्थापना दिवस। 1925 में इसी दिन संघ की स्थापना हुई थी। इस अवसर पर शस्त्र पूजन और संचलन (पथ संचलन) का आयोजन किया जाता है।</p>
+            </div>
+            <div class="utsav-card">
+                <div class="utsav-badge">६</div>
+                <h3>मकर संक्रांति</h3>
+                <span class="utsav-date">🗓️ 14/15 जनवरी</span>
+                <p>यह उत्सव सामाजिक समरसता और भ्रातृभाव का संदेश देता है। तिल-गुड़ बांटकर समाज में प्रेम और कटुता समाप्त करने का संकल्प लिया जाता है।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ghosh" class="special-section">
+        <h2>🥁 संघ घोष विभाग</h2>
+        <p class="section-desc">घोष (बैंड) संघ शाखाओं और संचलन का अत्यंत अनुशासित एवं ऊर्जावान अंग है:</p>
+        <div class="feature-box">
+            <div class="feature-card">
+                <div class="icon">🥁</div>
+                <h3>आनक (Side Drum)</h3>
+                <p>घोष वादन में लय और गति निर्धारित करने वाला मुख्य ताल वाद्य।</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🥁</div>
+                <h3>पणव (Bass Drum)</h3>
+                <p>गंभीर और ओजस्वी ध्वनि उत्पन्न करने वाला बड़ा ढोलक वाद्य।</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎺</div>
+                <h3>वंशरी / बिगुल</h3>
+                <p>विभिन्न रागों और रचनाओं के माध्यम से संचलन में देशभक्ति का संचार करने वाले स्वर वाद्य।</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔔</div>
+                <h3>झांझ (Cymbal)</h3>
+                <p>ताल संगति को पूर्णता और स्पष्टता प्रदान करने वाला वाद्य।</p>
+            </div>
+        </div>
+    </section>
+
     <section id="geet" class="special-section">
-        <h2>🎵 संघ गीत संग्रह</h2>
-        <p class="section-desc">राष्ट्रभक्ति, त्याग और ध्येय पथ पर निरंतर आगे बढ़ने की प्रेरणा देने वाले कालजयी संघ गीत:</p>
-        
+        <h2>🎶 देशभक्ति गीत संग्रह</h2>
+        <p class="section-desc">शाखाओं में गाए जाने वाले ओजस्वी एवं प्रेरणादायी देशभक्ति गीत:</p>
         <div class="song-box">
             <div class="song-card">
-                <h3>1. चंदन है इस देश की माटी</h3>
-                <p>राष्ट्र की पवित्रता एवं मातृभूमि के प्रति परम भक्ति भाव व्यक्त करने वाला अत्यंत प्रिय संघ गीत।</p>
-                <button onclick="toggleLyrics('lyrics1')">गीत के बोल (Lyrics) देखें</button>
-                <div id="lyrics1" class="lyrics-box">
-चंदन है इस देश की माटी, तपोभूमि हर ग्राम है।
-हर बाला देवी की प्रतिमा, बच्चा बच्चा राम है ॥
-
-जहाँ सिंह बन गए खिलौने, गाय जहाँ माँ जैसी है।
-जहाँ सबेरा शंख बजाता, लोरी गाती संध्या है ॥
-जहाँ कर्म से भाग्य बदलता, श्रम निष्ठा का नाम है।
-हर बाला देवी की प्रतिमा, बच्चा बच्चा राम है ॥
-
-जिसकी पावन धूलि में प्रभु, खेले थे श्री राम जी।
-जिसकी माटी को छूकर के, धन्य हुए घनश्याम जी ॥
-जहाँ त्याग और बलिदानों से, रचा गया इतिहास है।
-हर बाला देवी की प्रतिमा, बच्चा बच्चा राम है ॥
+                <h3>1. कदम कदम बढ़ाए जा</h3>
+                <p>सुभाष चंद्र बोस और आजाद हिंद फौज का अमर ओजस्वी गीत।</p>
+                <div class="audio-player-container">
+                    <audio controls>
+                        <source src="geet1.mp3" type="audio/mpeg">
+                        आपका ब्राउजर ऑडियो प्लेयर सपोर्ट नहीं करता।
+                    </audio>
                 </div>
             </div>
-
             <div class="song-card">
-                <h3>2. तुंग तरंगों से हो होड़</h3>
-                <p>संकल्प, साहस और राष्ट्र निर्माण के कठिन मार्ग पर निरंतर बढ़ते जाने का आह्वाहन।</p>
-                <button onclick="toggleLyrics('lyrics2')">गीत के बोल (Lyrics) देखें</button>
-                <div id="lyrics2" class="lyrics-box">
-तुंग तरंगों से हो होड़, जीवन की पतवार न छोड़।
-आंधियों में भी दीप जलाएं, हम पथ के अंगार हटाएं ॥
-
-कदम-कदम पर कांटे होंगे, बाधाओं के घेरे होंगे।
-पर जिनके मन में निष्ठा है, वे ही नूतन भोर लाएंगे ॥
-संघ शक्ति का ध्वज फहराएं, भारत को जगद्गुरु बनाएं ॥
+                <h3>2. संगठन गढ़ें चलो</h3>
+                <p>संघ कार्य की मूल प्रेरणा और सामाजिक एकता का आह्वान।</p>
+                <div class="audio-player-container">
+                    <audio controls>
+                        <source src="geet2.mp3" type="audio/mpeg">
+                        आपका ब्राउजर ऑडियो प्लेयर सपोर्ट नहीं करता।
+                    </audio>
                 </div>
             </div>
-
             <div class="song-card">
-                <h3>3. यह संघ प्रार्थना की पावन घड़ी</h3>
-                <p>दैनिक शाखा प्रार्थना का महत्व और स्वयंसेवक के जीवन में अनुशासन का भाव प्रस्तुत करता गीत।</p>
-                <button onclick="toggleLyrics('lyrics3')">गीत के बोल (Lyrics) देखें</button>
-                <div id="lyrics3" class="lyrics-box">
-यह संघ प्रार्थना की पावन घड़ी है,
-हृदय में हमारे देशभक्ति भरी है ॥
-
-कदम से कदम हम मिलाते चले हैं,
-विजय का महामंत्र गाते चले हैं ॥
-मातृभूमि के चरणों में जीवन समर्पित,
-यही भावना आज मन में बसी है ॥
+                <h3>3. यह भारत वर्ष हमारा है</h3>
+                <p>मातृभूमि की महिमा और गौरव गाथा पर आधारित सुंदर संघ गीत।</p>
+                <div class="audio-player-container">
+                    <audio controls>
+                        <source src="geet3.mp3" type="audio/mpeg">
+                        आपका ब्राउजर ऑडियो प्लेयर सपोर्ट नहीं करता।
+                    </audio>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="gallery" class="special-section">
+        <h2>🖼️ फोटो गैलरी</h2>
+        <p class="section-desc">MS भोमिया जी शाखा भवाद की विभिन्न गतिविधियों की झलकियां:</p>
+        <div class="gallery">
+            <div class="gallery-item" onclick="openLightbox('gallery1.jpg')">
+                <img src="gallery1.jpg" alt="शाखा गतिविधि 1" class="gallery-img" onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?w=500&auto=format&fit=crop&q=60';">
+            </div>
+            <div class="gallery-item" onclick="openLightbox('gallery2.jpg')">
+                <img src="gallery2.jpg" alt="शाखा गतिविधि 2" class="gallery-img" onerror="this.src='https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=500&auto=format&fit=crop&q=60';">
+            </div>
+            <div class="gallery-item" onclick="openLightbox('gallery3.jpg')">
+                <img src="gallery3.jpg" alt="शाखा गतिविधि 3" class="gallery-img" onerror="this.src='https://images.unsplash.com/photo-1526976668912-1a811878dd37?w=500&auto=format&fit=crop&q=60';">
+            </div>
+            <div class="gallery-item" onclick="openLightbox('gallery4.jpg')">
+                <img src="gallery4.jpg" alt="शाखा गतिविधि 4" class="gallery-img" onerror="this.src='https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=500&auto=format&fit=crop&q=60';">
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="special-section">
-        <h2>📞 शाखा से जुड़ें / संपर्क करें</h2>
-        <p class="section-desc">यदि आप भवाद शाखा में आना चाहते हैं या स्वयंसेवक के रूप में राष्ट्र सेवा से जुड़ना चाहते हैं तो संपर्क करें:</p>
-        <div class="instruction-box" style="text-align: center; font-size: 1.2rem;">
-            📍 <b>स्थान:</b> MS भोमिया जी शाखा, भवाद (खंड- बावड़ी, जिला- बिलाड़ा) <br>
-            📞 <b>संपर्क सूत्र:</b> +91 9351449562
+        <h2>🤝 शाखा से जुड़ें / संपर्क करें</h2>
+        <p class="section-desc">यदि आप राष्ट्र निर्माण के इस पुनीत कार्य में भागीदार बनना चाहते हैं, तो विवरण भरें:</p>
+        <div class="contact-section-layout">
+            <div class="contact-info">
+                <h3>🚩 MS भोमिया जी शाखा</h3>
+                <p><strong>स्थान:</strong> भवाद (बावड़ी खंड, जोधपुर)</p>
+                <p><strong>समय:</strong> प्रतिदिन सायंकाल</p>
+                <p><strong>ईमेल:</strong> contact@rssbhawad.org</p>
+                <p><strong>संपर्क सूत्र:</strong> +91 93514 49562</p>
+            </div>
+            <div class="contact-form">
+                <h3>संपर्क फॉर्म</h3>
+                <form onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="fullName">पूरा नाम</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="आपका नाम लिखें" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">मोबाइल नंबर</label>
+                        <input type="tel" id="phoneNumber" class="form-control" placeholder="आपका फोन नंबर" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">स्थान / गांव</label>
+                        <input type="text" id="address" class="form-control" placeholder="अपना स्थान दर्ज करें" required>
+                    </div>
+                    <button type="submit" class="btn">व्हाट्सएप पर भेजें ➔</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -913,49 +1157,85 @@
 
 <footer>
     <h3>🚩 राष्ट्रीय स्वयंसेवक संघ - MS भोमिया जी शाखा भवाद</h3>
-    <p>© 2026-27 भवाद शाखा | सर्वाधिकार सुरक्षित</p>
+    <p>© 2026 MS भोमिया जी, संयुक्त विद्यार्थी शाखा भवाद | सर्वाधिकार सुरक्षित</p>
 </footer>
 
-<a href="https://wa.me/919351449562" class="whatsapp" target="_blank" title="WhatsApp पर संपर्क करें">💬</a>
+<a href="https://wa.me/919351449562" class="whatsapp" target="_blank" title="WhatsApp पर जुड़ें">💬</a>
+
+<div id="imageLightbox" class="modal">
+    <img class="modal-content" id="lightboxImage">
+</div>
 
 <div id="infoModal" class="info-modal">
     <div class="info-modal-content">
         <span class="close-info-modal" onclick="closeDetailsModal()">&times;</span>
-        <h3 id="infoTitle" class="info-modal-title">शीर्षक</h3>
+        <h2 id="infoTitle" class="info-modal-title">शीर्षक</h2>
         <div id="infoBody" class="info-modal-body">विवरण...</div>
     </div>
 </div>
 
 <script>
 function toggleMobileMenu() {
-    const nav = id('nav-menu');
-    nav.classList.toggle('active');
+    const navMenu = id('nav-menu');
+    navMenu.classList.toggle('active');
 }
 
+function id(e) { return document.getElementById(e); }
+
+// Automatic Image Slider
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showNextSlide() {
+    slides[slideIndex].classList.remove('active');
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add('active');
+}
+setInterval(showNextSlide, 4000);
+
+// Open Lightbox
+function openLightbox(src) {
+    const modal = id('imageLightbox');
+    const modalImg = id('lightboxImage');
+    modal.style.display = "block";
+    modalImg.src = src;
+}
+
+// Open Dynamic Info Modal
 function openDetailsModal(title, description) {
-    document.getElementById('infoTitle').innerText = title;
-    document.getElementById('infoBody').innerHTML = description;
-    document.getElementById('infoModal').style.display = 'flex';
+    const infoModal = id('infoModal');
+    id('infoTitle').innerText = title;
+    id('infoBody').innerText = description;
+    infoModal.style.display = 'flex';
 }
 
 function closeDetailsModal() {
-    document.getElementById('infoModal').style.display = 'none';
+    id('infoModal').style.display = 'none';
 }
 
-function toggleLyrics(id) {
-    const el = document.getElementById(id);
-    if (el.style.display === 'block') {
-        el.style.display = 'none';
-    } else {
-        el.style.display = 'block';
-    }
-}
-
+// Close modals on clicking outside content
 window.onclick = function(event) {
-    const infoModal = document.getElementById('infoModal');
+    const infoModal = id('infoModal');
+    const imgModal = id('imageLightbox');
     if (event.target == infoModal) {
         infoModal.style.display = "none";
     }
+    if (event.target == imgModal) {
+        imgModal.style.display = "none";
+    }
+}
+
+// Form Submit Handler (WhatsApp Direct Message)
+function handleFormSubmit(event) {
+    event.preventDefault();
+    const name = id('fullName').value;
+    const phone = id('phoneNumber').value;
+    const address = id('address').value;
+    
+    const message = `नमस्ते, मैं MS भोमिया जी शाखा भवाद की वेबसाइट के माध्यम से शाखा से जुड़ना चाहता हूँ।\n\n*विवरण इस प्रकार है:*\n📝 *नाम:* ${name}\n📞 *मोबाइल:* ${phone}\n📍 *स्थान:* ${address}`;
+    const whatsappUrl = `https://wa.me/919351449562?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, '_blank');
 }
 </script>
 
